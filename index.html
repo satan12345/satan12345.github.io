@@ -180,7 +180,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Spring-Session-浅析"><a href="#Spring-Session-浅析" class="headerlink" title="Spring-Session 浅析"></a>Spring-Session 浅析</h1><p>​        HttpSession 是通过servlet容器创建和管理的 如tomcat/jetty 都是保存在内存中 但是随着应该的访问量逐渐增大 单机应用无法满足时 我们将单机应用扩展为集群应用时 单机存储存储方式便成了应用集群的限制。我们需要一种新的方式来管理session.</p>
+        <p>​     HttpSession 是通过servlet容器创建和管理的 如tomcat/jetty 都是保存在内存中 但是随着应该的访问量逐渐增大 单机应用无法满足时 我们将单机应用扩展为集群应用时 单机存储存储方式便成了应用集群的限制。我们需要一种新的方式来管理session.</p>
 <p>　1、利用Servlet容器提供的插件功能，自定义HttpSession的创建和管理策略，并通过配置的方式替换掉默认的策略。<em>这方面其实早就有开源项目了，例如memcached-session-manager(可以参考</em><a href="http://www.cnblogs.com/youzhibing/p/5094460.html" target="_blank" rel="noopener">负载均衡+session共享(memcached-session-manager实现</a>)，以及tomcat-redis-session-manager。不过这种方式有个缺点，就是需要耦合Tomcat/Jetty等Servlet容器的代码。</p>
 <p>　　2、设计一个Filter，利用HttpServletRequestWrapper，实现自己的 getSession()方法，接管创建和管理Session数据的工作。spring-session就是通过这样的思路实现的。</p>
 <p>根据官网描述 利用spring-session框架将session保存在外部的集群容器中只需要几部操作</p>
