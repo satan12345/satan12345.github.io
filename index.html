@@ -182,6 +182,7 @@
       
         <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h3><p>Map 这样的 <code>KeyValue</code> 在软件开发中是非常经典的结构，常用于在内存中存放数据。下面我们来谈谈这个有意思的API。</p>
 <h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><p>众所周知 HashMap 底层是基于 <strong><em>数组 + 链表</em></strong> 组成的，不过在 jdk1.7 和 1.8 中具体实现稍有不同。</p>
+<p>&lt; !–more–&gt;</p>
 <p><strong>JDK1.7</strong> 1.7中的数据结构图</p>
 <p><img src="/2019/01/18/HashMap/640.jpg" alt="jdk7 hashmap数据结构图"></p>
 <p>接下来我们开看看其中源码的实现部分：</p>
