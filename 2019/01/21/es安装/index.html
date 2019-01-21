@@ -6,19 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 源码分析 | science needs sacrifice</title>
+  <title>es安装 | science needs sacrifice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人只有自知无知 才能永远求知">
-<meta name="keywords" content="人只有自知无知 才能永远求知">
-<meta property="og:type" content="website">
-<meta property="og:title" content="science needs sacrifice">
-<meta property="og:url" content="http://yoursite.com/tags/源码分析/index.html">
+  <meta name="description" content="环境软件配置​    CentOS release 6.8 ​    elasticsearch-5.6.3 ​    jdk-8u181-linux-x64 安装jdk因为es是基于java开发 所以在安装es之前需要安装 jdk 首先卸载系统自带的jdk">
+<meta name="keywords" content="es">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es安装">
+<meta property="og:url" content="http://yoursite.com/2019/01/21/es安装/index.html">
 <meta property="og:site_name" content="science needs sacrifice">
-<meta property="og:description" content="人只有自知无知 才能永远求知">
+<meta property="og:description" content="环境软件配置​    CentOS release 6.8 ​    elasticsearch-5.6.3 ​    jdk-8u181-linux-x64 安装jdk因为es是基于java开发 所以在安装es之前需要安装 jdk 首先卸载系统自带的jdk">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/01/21/es安装/pic1.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/21/es安装/pic5.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/21/es安装/pic2.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/21/es安装/pic3.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/21/es安装/pic4.png">
+<meta property="og:updated_time" content="2019-01-21T06:42:52.344Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="science needs sacrifice">
-<meta name="twitter:description" content="人只有自知无知 才能永远求知">
+<meta name="twitter:title" content="es安装">
+<meta name="twitter:description" content="环境软件配置​    CentOS release 6.8 ​    elasticsearch-5.6.3 ​    jdk-8u181-linux-x64 安装jdk因为es是基于java开发 所以在安装es之前需要安装 jdk 首先卸载系统自带的jdk">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/21/es安装/pic1.png">
   
     <link rel="alternative" href="/atom.xml" title="science needs sacrifice" type="application/atom+xml">
   
@@ -158,60 +165,218 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-es安装" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/18/HashMap/" class="archive-article-date">
-  	<time datetime="2019-01-18T07:27:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/18/HashMap/">HashMap</a>
+    <h1 class="article-title" itemprop="name">
+      es安装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/01/21/es安装/" class="archive-article-date">
+  	<time datetime="2019-01-21T05:35:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="环境软件配置"><a href="#环境软件配置" class="headerlink" title="环境软件配置"></a>环境软件配置</h3><p>​    CentOS release 6.8</p>
+<p>​    elasticsearch-5.6.3</p>
+<p>​    jdk-8u181-linux-x64</p>
+<h3 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h3><p>因为es是基于java开发 所以在安装es之前需要安装 jdk</p>
+<p>首先卸载系统自带的jdk</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#查找系统自带的rpm方式安装的jdk</span><br><span class="line">rpm -qa |grep java</span><br><span class="line"></span><br><span class="line">tzdata-java-2016c-1.el6.noarch</span><br><span class="line"></span><br><span class="line">java-1.6.0-openjdk-1.6.0.38-1.13.10.4.el6.x86_64</span><br><span class="line"></span><br><span class="line">java-1.7.0-openjdk-1.7.0.99-2.6.5.1.el6.x86_64</span><br><span class="line">#卸载</span><br><span class="line">rpm -e --nodeps java-1.6.0-openjdk-1.6.0.38-1.13.10.4.el6.x86_64</span><br><span class="line"></span><br><span class="line">rpm -e --nodeps java-1.7.0-openjdk-1.7.0.99-2.6.5.1.el6.x86_64</span><br><span class="line"></span><br><span class="line">#安装jdk</span><br><span class="line">cd /usr/local/</span><br><span class="line">tar -zxvf jdk-8u181-linux-x64.tar.gz </span><br><span class="line">ln -s jdk1.8.0_181/ jdk</span><br><span class="line">#修改profile文件</span><br><span class="line">vi /etc/profile</span><br><span class="line">#jdk</span><br><span class="line">JAVA_HOME=/usr/local/jdk</span><br><span class="line">JRE_HOME=/usr/local/jdk/jre</span><br><span class="line">CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line"></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line">#验证当前系统的jdk版本号</span><br><span class="line"> java -version</span><br></pre></td></tr></table></figure>
+<h2 id="安装es"><a href="#安装es" class="headerlink" title="安装es"></a>安装es</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#解压</span><br><span class="line">tar -zxvf elasticsearch-5.6.3.tar.gz</span><br><span class="line">ln -s elasticsearch-5.6.3/ es</span><br><span class="line">cd es/bin</span><br><span class="line">#启动es</span><br><span class="line"> ./elasticsearch</span><br></pre></td></tr></table></figure>
+<h3 id="问题排查"><a href="#问题排查" class="headerlink" title="问题排查"></a>问题排查</h3><p><img src="/2019/01/21/es安装/pic1.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">elasticsearch是不允许使用root用户启动的，所以我们需要添加用户</span><br><span class="line"></span><br><span class="line">#创建es用户 并设置密码</span><br><span class="line"></span><br><span class="line">useradd es</span><br><span class="line">passwd es</span><br><span class="line">更改用户 es 的密码 。</span><br><span class="line">新的 密码：</span><br><span class="line">重新输入新的 密码：</span><br><span class="line">passwd： 所有的身份验证令牌已经成功更新。</span><br><span class="line">#修改文件权限</span><br><span class="line">chown -R es:es /usr/local/es/</span><br></pre></td></tr></table></figure>
+<p>切换es用户并重新启动</p>
+<p>su es</p>
+<p>./elasticsearch</p>
+<p>虽然启动成功了 但是发现只能在本机访问 而项目部署在的是虚拟机中 这样操作很不方便 需要修改</p>
+<!-- more -->
+<p>进入config目录下修改yml格式的配置文件</p>
+<p>因为虚拟机的内存比较小 所以顺序修改一下jvm.options</p>
+<p>将最大最小堆内存修改为512m</p>
+<p><img src="/2019/01/21/es安装/pic5.png" alt="pic4"></p>
+<p>cd config/</p>
+<p>vi elasticsearch.yml </p>
+<p>将network.host的配置改为0.0.0.0</p>
+<p><img src="/2019/01/21/es安装/pic2.png" alt=""></p>
+<p>再次启动 又出现其他的报错</p>
+<p><img src="/2019/01/21/es安装/pic3.png" alt=""></p>
+<p>可以看到是有4个错误 我们一个一个解决：</p>
+<p> <strong>1.max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]</strong></p>
+<p>每个进程最大同时打开文件数太小，可通过下面2个命令查看当前数量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ulimit -Hn</span><br><span class="line">ulimit -Sn</span><br></pre></td></tr></table></figure>
+<p>　　修改/etc/security/limits.conf文件，增加配置，用户退出后重新登录生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*               soft    nofile          65536</span><br><span class="line">*               hard    nofile          65536</span><br></pre></td></tr></table></figure>
+<p><strong>2.max number of threads [1024] for user [es] is too low, increase to at least [2048]</strong></p>
+<ol>
+<li><p>切换到root用户，进入limits.d目录下修改配置文件。</p>
+<p>vi /etc/security/limits.d/90-nproc.conf </p>
+</li>
+<li><p>修改如下内容：</p>
+<p>* soft nproc 1024</p>
+<p>#修改为</p>
+<p>* soft nproc 2048</p>
+<p>​</p>
+</li>
+</ol>
+<p><strong>3.max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]</strong></p>
+<p>修改/etc/sysctl.conf文件，增加配置vm.max_map_count=262144</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysctl.conf</span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+<p>　　执行命令sysctl -p生效</p>
+<p><strong>4 system call filters failed to install</strong></p>
+<p>问题原因：因为Centos6不支持SecComp，而ES默认bootstrap.system_call_filter为true进行检测，所以导致检测失败，失败后直接导致ES不能启动</p>
+<p>解决方法：在elasticsearch.yml中配置bootstrap.system_call_filter为false，注意要在Memory下面:<br>bootstrap.memory_lock: false<br>bootstrap.system_call_filter: false</p>
+<p>在次重新启动,则可以发现启动成功</p>
+<p><img src="/2019/01/21/es安装/pic4.png" alt="pic4"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">源码分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">es</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/21/es安装/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/01/18/HashMap/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HashMap</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -234,9 +399,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
