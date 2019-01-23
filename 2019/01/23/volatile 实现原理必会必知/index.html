@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: es | science needs sacrifice</title>
+  <title>volatile 实现原理 | science needs sacrifice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人只有自知无知 才能永远求知">
-<meta name="keywords" content="人只有自知无知 才能永远求知">
-<meta property="og:type" content="website">
-<meta property="og:title" content="science needs sacrifice">
-<meta property="og:url" content="http://yoursite.com/tags/es/index.html">
+  <meta name="description" content="原文出处：http://cmsblogs.com/ 『chenssy』   通过周一的文章我们了解了synchronized是一个重量级的锁，虽然JVM对它做了很多优化，而下面介绍的volatile则是轻量级的synchronized。如果一个变量使用volatile，则它比使用synchronized的成本更加低，因为它不会引起线程上下文的切换和调度。Java语言规范对volatile的定义如">
+<meta name="keywords" content="多线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="volatile 实现原理">
+<meta property="og:url" content="http://yoursite.com/2019/01/23/volatile 实现原理必会必知/index.html">
 <meta property="og:site_name" content="science needs sacrifice">
-<meta property="og:description" content="人只有自知无知 才能永远求知">
+<meta property="og:description" content="原文出处：http://cmsblogs.com/ 『chenssy』   通过周一的文章我们了解了synchronized是一个重量级的锁，虽然JVM对它做了很多优化，而下面介绍的volatile则是轻量级的synchronized。如果一个变量使用volatile，则它比使用synchronized的成本更加低，因为它不会引起线程上下文的切换和调度。Java语言规范对volatile的定义如">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/volatile%20实现原理必会必知/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/volatile%20实现原理必会必知/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/23/volatile%20实现原理必会必知/3.jpg">
+<meta property="og:updated_time" content="2019-01-23T00:50:57.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="science needs sacrifice">
-<meta name="twitter:description" content="人只有自知无知 才能永远求知">
+<meta name="twitter:title" content="volatile 实现原理">
+<meta name="twitter:description" content="原文出处：http://cmsblogs.com/ 『chenssy』   通过周一的文章我们了解了synchronized是一个重量级的锁，虽然JVM对它做了很多优化，而下面介绍的volatile则是轻量级的synchronized。如果一个变量使用volatile，则它比使用synchronized的成本更加低，因为它不会引起线程上下文的切换和调度。Java语言规范对volatile的定义如">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/23/volatile%20实现原理必会必知/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="science needs sacrifice" type="application/atom+xml">
   
@@ -158,60 +163,265 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="volatile-volatile 实现原理必会必知" class="article article-type-volatile " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/21/es安装/" class="archive-article-date">
-  	<time datetime="2019-01-21T05:35:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/21/es安装/">es安装</a>
+    <h1 class="article-title" itemprop="name">
+      volatile 实现原理
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/01/23/volatile 实现原理必会必知/" class="archive-article-date">
+  	<time datetime="2019-01-23T00:31:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>原文出处：<a href="http://cmsblogs.com/" target="_blank" rel="noopener">http://cmsblogs.com/</a> 『<strong>chenssy</strong>』</p>
+</blockquote>
+<hr>
+<p>通过周一的文章我们了解了synchronized是一个重量级的锁，虽然JVM对它做了很多优化，而下面介绍的volatile则是轻量级的synchronized。如果一个变量使用volatile，则它比使用synchronized的成本更加低，<strong>因为它不会引起线程上下文的切换和调度</strong>。Java语言规范对volatile的定义如下：</p>
+<blockquote>
+<p>Java编程语言允许线程访问共享变量，为了确保共享变量能被准确和一致地更新，线程应该确保通过排他锁单独获得这个变量。</p>
+</blockquote>
+<p>上面比较绕口，通俗点讲就是说一个变量如果用volatile修饰了，则Java可以确保所有线程看到这个变量的值是一致的，如果某个线程对volatile修饰的共享变量进行更新，那么其他线程可以立马看到这个更新，这就是所谓的线程可见性。</p>
+<p>volatile虽然看起来比较简单，使用起来无非就是在一个变量前面加上volatile即可，但是要用好并不容易。</p>
+<a id="more"></a>
+<h2 id="内存模型相关概念"><a href="#内存模型相关概念" class="headerlink" title="内存模型相关概念"></a>内存模型相关概念</h2><p>理解volatile其实还是有点儿难度的，它与Java的内存模型有关，所以在理解volatile之前我们需要先了解有关Java内存模型的概念，这里只做初步的介绍，后续LZ会详细介绍Java内存模型。</p>
+<h3 id="操作系统语义"><a href="#操作系统语义" class="headerlink" title="操作系统语义"></a>操作系统语义</h3><p>计算机在运行程序时，每条指令都是在CPU中执行的，在执行过程中势必会涉及到数据的读写。我们知道程序运行的数据是存储在主存中，这时就会有一个问题，读写主存中的数据没有CPU中执行指令的速度快，如果任何的交互都需要与主存打交道则会大大影响效率，所以就有了CPU高速缓存。CPU高速缓存为某个CPU独有，只与在该CPU运行的线程有关。</p>
+<p>有了CPU高速缓存虽然解决了效率问题，但是它会带来一个新的问题：数据一致性。在程序运行中，<strong>会将运行所需要的数据复制一份到CPU高速缓存中</strong>，在进行运算时CPU不再也主存打交道，而是直接从高速缓存中读写数据，只有当运行结束后才会将数据刷新到主存中。举一个简单的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i++</span><br></pre></td></tr></table></figure>
+<p>当线程运行这段代码时，首先会从主存中读取i( i = 1)，然后复制一份到CPU高速缓存中，然后CPU执行 + 1 （2）的操作，然后将数据（2）写入到高速缓存中，最后刷新到主存中。其实这样做在单线程中是没有问题的，有问题的是在多线程中。如下：</p>
+<p>假如有两个线程A、B都执行这个操作（i++），按照我们正常的逻辑思维主存中的i值应该=3，但事实是这样么？分析如下：</p>
+<p>两个线程从主存中读取i的值（1）到各自的高速缓存中，然后线程A执行+1操作并将结果写入高速缓存中，最后写入主存中，此时主存i==2,线程B做同样的操作，主存中的i仍然=2。所以最终结果为2并不是3。这种现象就是缓存一致性问题。</p>
+<p>解决缓存一致性方案有两种：</p>
+<ol>
+<li>通过在总线加LOCK#锁的方式</li>
+<li><strong>通过缓存一致性协议</strong></li>
+</ol>
+<p>但是方案1存在一个问题，它是采用一种独占的方式来实现的，即总线加LOCK#锁的话，只能有一个CPU能够运行，其他CPU都得阻塞，效率较为低下。</p>
+<p>第二种方案，<strong>缓存一致性协议（MESI协议）</strong>它确保每个缓存中使用的共享变量的副本是一致的。其核心思想如下：当<strong>某个CPU在写数据时，如果发现操作的变量是共享变量，则会通知其他CPU告知该变量的缓存行是无效的，因此其他CPU在读取该变量时，发现其无效会重新从主存中加载数据</strong>。</p>
+<p><img src="/2019/01/23/volatile 实现原理必会必知/1.jpg" alt="img"></p>
+<h3 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h3><p>上面从操作系统层次阐述了如何保证数据一致性，下面我们来看一下Java内存模型，稍微研究一下Java内存模型为我们提供了哪些保证以及在Java中提供了哪些方法和机制来让我们在进行多线程编程时能够保证程序执行的正确性。</p>
+<p>在并发编程中我们一般都会遇到这三个基本概念：<strong>原子性、可见性、有序性</strong>。我们稍微看下volatile</p>
+<h4 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h4><blockquote>
+<p>原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行。</p>
+</blockquote>
+<p>原子性就像数据库里面的事务一样，他们是一个团队，同生共死。其实理解原子性非常简单，我们看下面一个简单的例子即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i = 0;            ---1j = i ;            ---2i++;            ---3i = j + 1;    ---4</span><br></pre></td></tr></table></figure>
+<p>上面四个操作，有哪个几个是原子操作，那几个不是？如果不是很理解，可能会认为都是原子性操作，其实只有1才是原子操作，其余均不是。</p>
+<ul>
+<li>1—在Java中，对基本数据类型的变量和赋值操作都是原子性操作；</li>
+<li>2—包含了两个操作：读取i，将i值赋值给j</li>
+<li>3—包含了三个操作：读取i值、i + 1 、将+1结果赋值给i；</li>
+<li>4—同三一样</li>
+</ul>
+<p>在单线程环境下我们可以认为整个步骤都是原子性操作，但是在多线程环境下则不同，Java只保证了基本数据类型的变量和赋值操作才是原子性的（<strong>注：在32位的JDK环境下，对64位数据的读取不是原子性操作*，如long、double</strong>）。要想在多线程环境下保证原子性，则可以通过锁、synchronized来确保。</p>
+<blockquote>
+<p><strong>volatile是无法保证复合操作的原子性</strong></p>
+</blockquote>
+<h4 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h4><blockquote>
+<p>可见性是指当多个线程访问同一个变量时，一个线程修改了这个变量的值，其他线程能够立即看得到修改的值。</p>
+</blockquote>
+<p>在上面已经分析了，在多线程环境下，一个线程对共享变量的操作对其他线程是不可见的。</p>
+<p><strong>Java提供了volatile来保证可见性。</strong></p>
+<p>当一个变量被volatile修饰后，表示着线程本地内存无效，当一个线程修改共享变量后他会立即被更新到主内存中，当其他线程读取共享变量时，它会直接从主内存中读取。当然，synchronize和锁都可以保证可见性。</p>
+<h4 id="有序性"><a href="#有序性" class="headerlink" title="有序性"></a>有序性</h4><blockquote>
+<p>有序性：即程序执行的顺序按照代码的先后顺序执行。</p>
+</blockquote>
+<p>在Java内存模型中，为了效率是允许编译器和处理器对指令进行重排序，当然重排序它不会影响单线程的运行结果，但是对多线程会有影响。</p>
+<p>Java提供volatile来保证一定的有序性。最著名的例子就是单例模式里面的DCL（双重检查锁）。</p>
+<h2 id="剖析volatile原理"><a href="#剖析volatile原理" class="headerlink" title="剖析volatile原理"></a>剖析volatile原理</h2><p>JMM比较庞大，不是上面一点点就能够阐述的。上面简单地介绍都是为了volatile做铺垫的。</p>
+<blockquote>
+<p>volatile可以保证线程可见性且提供了一定的有序性，但是无法保证原子性。在JVM底层volatile是采用<strong>“内存屏障”</strong>来实现的。</p>
+</blockquote>
+<p>上面那段话，有两层语义</p>
+<ol>
+<li><strong>保证可见性、不保证原子性</strong></li>
+<li><strong>禁止指令重排序</strong></li>
+</ol>
+<p>第一层语义就不做介绍了，下面重点介绍指令重排序。</p>
+<p>在执行程序时为了提高性能，编译器和处理器通常会对指令做重排序：</p>
+<ol>
+<li>编译器重排序。编译器在不改变单线程程序语义的前提下，可以重新安排语句的执行顺序；</li>
+<li>处理器重排序。如果不存在数据依赖性，处理器可以改变语句对应机器指令的执行顺序；</li>
+</ol>
+<p>指令重排序对单线程没有什么影响，他不会影响程序的运行结果，但是会影响多线程的正确性。既然指令重排序会影响到多线程执行的正确性，那么我们就需要禁止重排序。那么JVM是如何禁止重排序的呢？这个问题稍后回答，我们先看另一个原则happens-before，happen-before原则保证了程序的“有序性”，它规定如果两个操作的执行顺序无法从happens-before原则中推到出来，那么他们就不能保证有序性，可以随意进行重排序。其定义如下：</p>
+<ol>
+<li>同一个线程中的，前面的操作 happen-before 后续的操作。（即单线程内按代码顺序执行。但是，在不影响在单线程环境执行结果的前提下，编译器和处理器可以进行重排序，这是合法的。换句话说，这一是规则无法保证编译重排和指令重排）。</li>
+<li>监视器上的解锁操作 happen-before 其后续的加锁操作。（Synchronized 规则）</li>
+<li>对volatile变量的写操作 happen-before 后续的读操作。（volatile 规则）</li>
+<li>线程的start() 方法 happen-before 该线程所有的后续操作。（线程启动规则）</li>
+<li>线程所有的操作 happen-before 其他线程在该线程上调用 join 返回成功后的操作。</li>
+<li>如果 a happen-before b，b happen-before c，则a happen-before c（传递性）。</li>
+</ol>
+<p>我们着重看第三点volatile规则：对volatile变量的写操作 happen-before 后续的读操作。为了实现volatile内存语义，JMM会重排序，其规则如下：</p>
+<p>对happen-before原则有了稍微的了解，我们再来回答这个问题JVM是如何禁止重排序的？</p>
+<p><img src="/2019/01/23/volatile 实现原理必会必知/2.jpg" alt="img"></p>
+<p><strong>观察加入volatile关键字和没有加入volatile关键字时所生成的汇编代码发现，加入volatile关键字时，会多出一个lock前缀指令</strong>。lock前缀指令其实就相当于一个内存屏障。内存屏障是一组处理指令，用来实现对内存操作的顺序限制。volatile的底层就是通过内存屏障来实现的。下图是完成上述规则所需要的内存屏障：</p>
+<p>volatile暂且下分析到这里，JMM体系较为庞大，不是三言两语能够说清楚的，后面会结合JMM再一次对volatile深入分析。</p>
+<p><img src="/2019/01/23/volatile 实现原理必会必知/3.jpg" alt="img"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>volatile看起来简单，但是要想理解它还是比较难的，这里只是对其进行基本的了解。volatile相对于synchronized稍微轻量些，在某些场合它可以替代synchronized，但是又不能完全取代synchronized，只有在某些场合才能够使用volatile。使用它必须满足如下两个条件：</p>
+<ol>
+<li>对变量的写操作不依赖当前值；</li>
+<li>该变量没有包含在具有其他变量的不变式中。</li>
+</ol>
+<blockquote>
+<p>volatile经常用于两个两个场景：状态标记两、double check</p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li>周志明：《深入理解Java虚拟机》</li>
+<li>方腾飞：《Java并发编程的艺术》</li>
+<li>Java并发编程：volatile关键字解析</li>
+<li>Java 并发编程：volatile的使用及其原理</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">es</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/23/volatile 实现原理必会必知/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/01/21/es安装/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">es安装</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -234,9 +444,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
