@@ -6,34 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>一个好用插件 Alibaba Cloud Toolkit | science needs sacrifice</title>
+  <title>Linux环境快速搭建elasticsearch6.5.4集群和Head插件 | science needs sacrifice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="背景​    idea 可以说是java开发的神器了 而神器的NB之处不仅仅在于本身的强势 同时各种基于神器而开发的各种插件更是让神器如虎添翼 最近看到阿里云发布了一款名为 Alibaba Cloud Toolkit 的插件，可以帮助开发者高效开发并部署到远程服务器上（不管是云端还是 内网的个人搭建的服务器），终于不需要切换到ctx,xshell等客户端再去手动 scp/ftp 上传应用到服务器了">
-<meta name="keywords" content="插件 idea">
+  <meta name="description" content="来源： https://blog.csdn.net/boling_cavalry/article/details/86358716 今天来一起实战Linux环境下搭建elasticsearch6.5.4集群和Head插件； 环境信息 操作系统：Ubuntu 16.04.5 LTS JDK：1.8.0_191 elasticsearch：6.5.4 nodejs：v10.15.0 本次实战准备了两台">
+<meta name="keywords" content="es安装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一个好用插件 Alibaba Cloud Toolkit">
-<meta property="og:url" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/index.html">
+<meta property="og:title" content="Linux环境快速搭建elasticsearch6.5.4集群和Head插件">
+<meta property="og:url" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/index.html">
 <meta property="og:site_name" content="science needs sacrifice">
-<meta property="og:description" content="背景​    idea 可以说是java开发的神器了 而神器的NB之处不仅仅在于本身的强势 同时各种基于神器而开发的各种插件更是让神器如虎添翼 最近看到阿里云发布了一款名为 Alibaba Cloud Toolkit 的插件，可以帮助开发者高效开发并部署到远程服务器上（不管是云端还是 内网的个人搭建的服务器），终于不需要切换到ctx,xshell等客户端再去手动 scp/ftp 上传应用到服务器了">
+<meta property="og:description" content="来源： https://blog.csdn.net/boling_cavalry/article/details/86358716 今天来一起实战Linux环境下搭建elasticsearch6.5.4集群和Head插件； 环境信息 操作系统：Ubuntu 16.04.5 LTS JDK：1.8.0_191 elasticsearch：6.5.4 nodejs：v10.15.0 本次实战准备了两台">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/0.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/1.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/3.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/4.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/5.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/7.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/8.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/9.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/10.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/11.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/12.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/13.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/14.jpg">
-<meta property="og:updated_time" content="2019-01-31T09:31:42.180Z">
+<meta property="og:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/0.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/8.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/6.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/7.jpg">
+<meta property="og:updated_time" content="2019-02-12T02:42:25.146Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一个好用插件 Alibaba Cloud Toolkit">
-<meta name="twitter:description" content="背景​    idea 可以说是java开发的神器了 而神器的NB之处不仅仅在于本身的强势 同时各种基于神器而开发的各种插件更是让神器如虎添翼 最近看到阿里云发布了一款名为 Alibaba Cloud Toolkit 的插件，可以帮助开发者高效开发并部署到远程服务器上（不管是云端还是 内网的个人搭建的服务器），终于不需要切换到ctx,xshell等客户端再去手动 scp/ftp 上传应用到服务器了">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/0.jpg">
+<meta name="twitter:title" content="Linux环境快速搭建elasticsearch6.5.4集群和Head插件">
+<meta name="twitter:description" content="来源： https://blog.csdn.net/boling_cavalry/article/details/86358716 今天来一起实战Linux环境下搭建elasticsearch6.5.4集群和Head插件； 环境信息 操作系统：Ubuntu 16.04.5 LTS JDK：1.8.0_191 elasticsearch：6.5.4 nodejs：v10.15.0 本次实战准备了两台">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="science needs sacrifice" type="application/atom+xml">
   
@@ -173,77 +169,235 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-一个好用插件-Alibaba-Cloud-Toolkit" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-Linux环境快速搭建elasticsearch6-5-4集群和Head插件" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      一个好用插件 Alibaba Cloud Toolkit
+      Linux环境快速搭建elasticsearch6.5.4集群和Head插件
     </h1>
   
 
         
-        <a href="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/" class="archive-article-date">
-  	<time datetime="2019-01-30T08:09:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-30</time>
+        <a href="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/" class="archive-article-date">
+  	<time datetime="2019-02-12T02:06:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>​    idea 可以说是java开发的神器了 而神器的NB之处不仅仅在于本身的强势 同时各种基于神器而开发的各种插件更是让神器如虎添翼</p>
-<p>最近看到<a href="https://www.baidu.com/s?wd=%E9%98%BF%E9%87%8C%E4%BA%91&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">阿里云</a>发布了一款名为 Alibaba Cloud Toolkit 的插件，可以帮助开发者高效开发并部署到远程服务器上（不管是云端还是 内网的个人搭建的服务器），终于不需要切换到ctx,xshell等客户端再去手动 scp/ftp 上传应用到服务器了，连启动的命令都是可以自行编写的，棒棒！</p>
-<p>官网地址:<a href="https://www.aliyun.com/product/cloudtoolkit" target="_blank" rel="noopener">Alibaba Cloud Toolkit</a></p>
+        <p>来源：</p>
+<p><a href="https://blog.csdn.net/boling_cavalry/article/details/86358716" target="_blank" rel="noopener">https://blog.csdn.net/boling_cavalry/article/details/86358716</a></p>
+<p>今天来一起实战Linux环境下搭建elasticsearch6.5.4集群和Head插件；</p>
+<p><strong>环境信息</strong></p>
+<p>操作系统：Ubuntu 16.04.5 LTS</p>
+<p>JDK：1.8.0_191</p>
+<p>elasticsearch：6.5.4</p>
+<p>nodejs：v10.15.0</p>
+<p>本次实战准备了两台机器，它们的基本情况如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>IP地址</th>
+<th>hostname</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.119.152</td>
+<td>node-0</td>
+<td>节点0</td>
+</tr>
+<tr>
+<td>192.168.119.153</td>
+<td>node-1</td>
+<td>节点1</td>
+</tr>
+</tbody>
+</table>
 <a id="more"></a>
-<h3 id="什么是-Alibaba-Cloud-Toolkit"><a href="#什么是-Alibaba-Cloud-Toolkit" class="headerlink" title="什么是 Alibaba Cloud Toolkit"></a>什么是 Alibaba Cloud Toolkit</h3><p>​    Alibaba Cloud Toolkit （后文简称 Cloud Toolkit）是阿里云针对 IDE 平台为开发者提供的一款插件，用于帮助开发者高效开发并部署适合在云端运行的应用。</p>
-<p>您在本地完成应用程序的开发、调试和测试后，可以使用在 IDE （如 Eclipse 或 IntelliJ IDEA）中安装的 Cloud Toolkit 插件，通过图形配置的方式连接到云端部署环境并将应用程序快速部署到云端。</p>
-<p>​    官网给出该toolkit包含三大功能：</p>
-<blockquote>
-<p><strong>1.应用部署</strong></p>
-<p><strong>2.内置终端Terminal</strong></p>
-<p><strong>3.文件上传</strong></p>
-</blockquote>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>​    想要体验这款插件首先就要安装</p>
-<p>​    本文以在IDEA中使用为例，不考虑eclipse。</p>
-<p><strong>一.软硬件要求</strong></p>
-<p>JDK1.8</p>
-<p>IDEA2018.3或以上版本</p>
-<p>IDEA2018.3或以上版本</p>
-<p>IDEA2018.3或以上版本 </p>
-<p>重要的事情说三遍 </p>
-<p>为了这个插件 我特定升级了idea,当然升级也是一件很容易的事情 下一步安装 然后使用原来版本的配置文件 分分钟搞定，当然如果不升级也是可以的 只是插件的功能会少了那么一丢丢 （应用部署只能部署到云服务器 而无法部署到公司内部的测试服务器上） 当然我觉得这个对我还是很重要的 所以就很坚决的升级了</p>
-<p>​    <img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/0.jpg" alt=""></p>
-<p>Ctrl+Shift+S 打开Settings页面 找到pulgins栏目 在Marketplace输入 Alibaba Cloud Toolkit</p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/1.jpg" alt=""></p>
-<p>然后直接安装  安装完成后重启即可</p>
-<p>当然 也会存在着网络不行 插件下载不下来的情况 </p>
-<p>那么就可以直接去官网下载：<a href="https://plugins.jetbrains.com/plugin/11386-alibaba-cloud-toolkit" target="_blank" rel="noopener">Alibaba Cloud Toolkit</a></p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/3.jpg" alt=""></p>
-<p> 直接怼这个最新的就行了 </p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>当安装完成后 重新打开idea可以在最下面看到插件的tab  这里 我就以自有服务器介绍一下他的用法</p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/4.jpg" alt=""></p>
-<p>首先我们在host的这个tab页上点击 AddHost </p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/5.jpg" alt=""></p>
-<p>输入相应的ip port 用户名 密码  最后test connection一下看看是否能够连接</p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/7.jpg" alt=""></p>
-<p>然后就可以在下方的列表看到对应的服务器信息了</p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/8.jpg" alt=""></p>
-<p>点击Terminal 则可以直接连接到相应的服务器上进行操作了 就像酱紫，上一次在idea做的操作 还是直接在idea中操作数据库(替代navicat等数据库客户端的工具)</p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/9.jpg" alt=""></p>
-<p>当然如果点击的是Upload按钮则会弹框出来这样的</p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/10.jpg" alt=""></p>
-<p>可以选择文件 然后上传到指定的目录 还可以通过命令确定当上传完成后做什么一些后续的操作 比如 项目发布到服务器上后 重启服务器等操作</p>
-<p>个人最看中的就要属项目部署的这个功能了</p>
-<p>右击要部署的项目 找到如图所示:</p>
-<p>​    <img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/11.jpg" alt=""></p>
-<p>​    <img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/12.jpg" alt=""></p>
-<p>选择编译打包完成后的文件 指定部署的服务器 指定部署的路径  还可以编写当上传完成后执行的操作命令 最后点击run </p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/13.jpg" alt=""></p>
-<p>从日志中 我们可以看到项目编译完成 然后部署到服务器上 最后 重启了了服务器</p>
-<h3 id="一点有意思的事情"><a href="#一点有意思的事情" class="headerlink" title="一点有意思的事情"></a>一点有意思的事情</h3><p>因为开始使用 这个 加了群后因为吐槽了官网的说明文档使用gif动画 导致错过了细节要不停的看 结果看了十几遍 还被选中 最用心吐槽  得了一套葫芦娃的淘公仔 还是很开心的  </p>
-<p><img src="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/14.jpg" alt=""></p>
+<p><strong>操作步骤整理</strong></p>
+<p>整个实战由以下操作步骤组成，注意：有的步骤需要在两台机器上都要做，在具体操作的地方，我会用红字说明：</p>
+<p>1.修改主机名；</p>
+<p>2.修改hosts;</p>
+<p>3.修改linux文件描述符限制；</p>
+<p>4.修改最大线程数限制；</p>
+<p>5.修改内存限制；</p>
+<p>6.安装JDK；</p>
+<p>7.创建用户；</p>
+<p>8.给es用户增加sudo权限</p>
+<p>9.安装elasticsearch；</p>
+<p>10.在node-0机器安装nodejs</p>
+<p>11.设置elasticsearch；</p>
+<p>12.启动elasticsearch</p>
+<p>13.安装head组件（只在node-0上安装）</p>
+<p>14.验证</p>
+<p><strong>修改主机名</strong></p>
+<p>注意：以下的操作在node-0和node-1两台机器上都要做</p>
+<p>打开文件/etc/hostname，将内容修改为本次实战所需的hostname(node-0和node-1)；</p>
+<p><strong>修改hosts</strong></p>
+<p>注意：以下的操作在node-0和node-1两台机器上都要做</p>
+<p>打开文件令/etc/hosts，增加以下两行，读者请注意改为自己机器的IP地址：</p>
+<p>192.168.119.152 node-0192.168.119.153 node-1</p>
+<h3 id="修改linux文件描述符限制"><a href="#修改linux文件描述符限制" class="headerlink" title="修改linux文件描述符限制"></a>修改linux文件描述符限制</h3><p>注意：以下的操作在node-0和node-1两台机器上都要做</p>
+<p>1、执行命令ulimit -Hn，查看硬限制：</p>
+<p>[root@localhost es]# ulimit -Hn</p>
+<p>4096</p>
+<p>2、执行命令ulimit -Sn，查看软限制(程序中可以提升)：</p>
+<p>[root@localhost es]# ulimit -Sn</p>
+<p>1024</p>
+<p>上述限制会导致elasticsearch启动失败，所以需要调整；</p>
+<p>\3. 打开文件<br>/etc/security/limits.conf，增加以下两行设置（注意，如果是已有配置就修改对应的值）：</p>
+<p>*          soft    nofile        65536*          hard    nofile        65536</p>
+<p>4、修改完成后退出重新登录，再次查看发现配置已经生效：</p>
+<p>[root@localhost ~]# ulimit -Hn</p>
+<p>65536</p>
+<p>[root@localhost ~]# ulimit -Sn</p>
+<p>65536</p>
+<p>### </p>
+<h3 id="修改最大线程数限制"><a href="#修改最大线程数限制" class="headerlink" title="修改最大线程数限制"></a>修改最大线程数限制</h3><p>注意：以下的操作在node-0和node-1两台机器上都要做</p>
+<p>1、打开文件<br>/etc/security/limits.conf，增加以下两行设置（注意，如果是已有配置就修改对应的值）：</p>
+<p>*          soft    nproc        4096*          hard    nproc        4096</p>
+<p>2、修改完毕后，需要重启才会生效；</p>
+<p>### </p>
+<h3 id="修改内存限制"><a href="#修改内存限制" class="headerlink" title="修改内存限制"></a>修改内存限制</h3><p>注意：以下的操作在node-0和node-1两台机器上都要做</p>
+<p>1、修改进程中内存映射区域的最大数量，修改/etc/sysctl.conf文件，增加以下配置（注意，如果是已有配置就修改对应的值）：</p>
+<p>vm.max_map_count=262144</p>
+<p>2、修改完成后，重启生效；</p>
+<p><strong>安装JDK</strong></p>
+<p>注意：以下的操作在node-0和node-1两台机器上都要做</p>
+<p>1、在官网下载JDK，地址是<a href="https://www.oracle.com/technetwork/java/index.html，在上面选择合适的版本下载；" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/index.html，在上面选择合适的版本下载；</a></p>
+<p>2、将下载的JDK安装文件放在目录/usr/lib/jvm，解压；</p>
+<p>3、我这边JDK解压后的完整路径是/usr/lib/jvm/jdk1.8.0_191，在/etc/profile文件增加以下内容：</p>
+<p>export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_191</p>
+<p>export JRE_HOME=${JAVA_HOME}/jre</p>
+<p>export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib</p>
+<p>export PATH=${JAVA_HOME}/bin:$PATH</p>
+<p>4、修改完毕后执行命令source /etc/profile使设置立即生效，执行java -version查看设置是否成功：</p>
+<p>[root@localhost jdk1.8.0_191]# java -version</p>
+<p>java version “1.8.0_191”</p>
+<p>Java(TM) SE Runtime Environment (build 1.8.0_191-b12)</p>
+<p>Java HotSpot(TM) 64-Bit Server VM (build 25.191-b12, mixed mode)</p>
+<p><strong>创建用户</strong></p>
+<p>注意：以下的操作在node-0和node-1两台机器上都要做</p>
+<p>es不允许root用户启动应用，因此需要创建用户：</p>
+<p>1、执行命令useradd es，即可创建用户es;</p>
+<p>2、执行命令passwd es，按照提示修改用户密码;</p>
+<p><strong>给es用户增加sudo权限</strong></p>
+<p>注意：以下的操作在node-0和node-1两台机器上都要做</p>
+<p>1、给文件/etc/sudoers增加写权限:</p>
+<p>chmod a+w /etc/sudoers</p>
+<p>2、打开文件/etc/sudoers；</p>
+<p>3、增加以下一行内容：</p>
+<p>es      ALL=(ALL:ALL) ALL</p>
+<p>4、保存后，修改sudoers文件的权限：</p>
+<p>chmod 440 /etc/sudoers</p>
+<p><strong>安装elasticsearch</strong></p>
+<p>注意：以下的操作在node-0和node-1两台机器上都要做</p>
+<p>1、在官网下载安装包，地址是：<a href="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.tar.gz" target="_blank" rel="noopener">https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.tar.gz</a></p>
+<p>2、解压后的完整目录是/usr/local/work/es/elasticsearch-6.5.4，执行以下命令将文件夹的所有者和群组设置为es：</p>
+<p>chown -R es:es /usr/local/work/es/elasticsearch-6.5.4</p>
+<p>3、执行ls命令确认一下所属用户和群组：</p>
+<p>root@node-0:/usr/local/work/es# ls -al</p>
+<p>total 12</p>
+<p>drwxr-xr-x 3 root root 4096 Jan 11 18:54 .</p>
+<p>drwxr-xr-x 6 root root 4096 Jan 11 18:43 ..</p>
+<p>drwxr-xr-x 8 es   es   4096 Dec 17 13:21 elasticsearch-6.5.4</p>
+<h3 id="在node-0机器安装nodejs"><a href="#在node-0机器安装nodejs" class="headerlink" title="在node-0机器安装nodejs"></a>在node-0机器安装nodejs</h3><p>1、在node-0机器安装nodejs，详细的操作步骤请参考《Ubuntu16安装nodejs10》，其实就是下载、解压、设置等操作，很快就能完成；</p>
+<p>2、执行以下命令，确保es账号能访问nodejs目录，是nodejs安装的目录：</p>
+<p>sudo chmod 777 -R /usr/local/work/nodejs/node-v10.15.0-linux-x64</p>
+<p>### </p>
+<h3 id="设置elasticsearch"><a href="#设置elasticsearch" class="headerlink" title="设置elasticsearch"></a>设置elasticsearch</h3><p>1、打开node-0机器的文件，新增或者修改以下配置信息：</p>
+<p><img src="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/0.jpg" alt="img"></p>
+<p>2、打开node-1机器的文件，新增或者修改以下配置信息：</p>
+<p><img src="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/1.jpg" alt="img"></p>
+<p>两台机器的配置中，只有node.name这个参数的值不同，其他的一模一样，在node-0机器上修改后的elasticsearch.yml文件如下所示：</p>
+<p><img src="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/2.jpg" alt="img"></p>
+<h3 id="启动elasticsearch"><a href="#启动elasticsearch" class="headerlink" title="启动elasticsearch"></a>启动elasticsearch</h3><p>1、如果当前用户是root，执行命令su - es，切换到es用户；</p>
+<p>2、执行以下命令启动node-0的elasticsearch：</p>
+<p>/usr/local/work/es/elasticsearch-6.5.4/bin/elasticsearch</p>
+<p>3、在node-1机器上执行步骤1和2，node-1的elasticsearch启动成功后，在node-0的控制台可以看到node-1加入集群的信息如下：</p>
+<p><img src="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/8.jpg" alt=""></p>
+<p>4、在浏览器上访问192.168.119.153:9300，可以返回基本信息如下图所示：</p>
+<p><img src="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/3.jpg" alt="img"></p>
+<p>5、至此，elasticsearch集群搭建成功，接下来安装head组件；</p>
+<p>### </p>
+<h3 id="安装head组件（只在node-0上安装）"><a href="#安装head组件（只在node-0上安装）" class="headerlink" title="安装head组件（只在node-0上安装）"></a>安装head组件（只在node-0上安装）</h3><p>1、下载插件，地址：<a href="https://github.com/mobz/elasticsearch-head" target="_blank" rel="noopener">https://github.com/mobz/elasticsearch-head</a></p>
+<p>2、可以用git clone命令下载，也可以在网页上下载，如下图所示：</p>
+<p><img src="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/4.jpg" alt="img"></p>
+<p>3、下载到本地的是个名为elasticsearch-head-master的文件夹，放在目录/usr/local/work/es之下；</p>
+<p>4、确保文件夹的权限属于用户es，以下命令以root账号身份执行：</p>
+<p>chown -R es:es /usr/local/work/es/elasticsearch-head-master</p>
+<p>5、以es账号的身份，在elasticsearch-head-master文件夹下执行命令npm install -g grunt-cli：</p>
+<p>$ cd ../es/elasticsearch-head-master/</p>
+<p>$ npm install -g grunt-cli</p>
+<p>/usr/local/work/nodejs/node-v10.15.0-linux-x64/bin/grunt -&gt; /usr/local/work/nodejs/node-v10.15.0-linux-x64/lib/node_modules/grunt-cli/bin/grunt</p>
+<p>+ <a href="mailto:grunt-cli@1.3.2" target="_blank" rel="noopener">grunt-cli@1.3.2</a></p>
+<p>added 152 packages from 122 contributors in 18.241s</p>
+<p>上述命令安装了grunt-cli，是用于构建的，接下来安装head；</p>
+<p>\6. 在elasticsearch-head-master文件夹下执行命令npm install，用于安装head，由于网络问题有可能安装失败，提示信息类似以下：</p>
+<p>$ npm install</p>
+<p>npm WARN deprecated <a href="mailto:coffee-script@1.10.0" target="_blank" rel="noopener">coffee-script@1.10.0</a>: CoffeeScript on NPM has moved to “coffeescript” (no hyphen)</p>
+<p>npm WARN deprecated <a href="mailto:http2@3.3.7" target="_blank" rel="noopener">http2@3.3.7</a>: Use the built-in module in node 9.0.0 or newer, instead</p>
+<p>><a href="mailto:phantomjs-prebuilt@2.1.16install" target="_blank" rel="noopener">phantomjs-prebuilt@2.1.16install</a> /usr/local/work/es/elasticsearch-head-master/node_modules/phantomjs-prebuilt</p>
+<p>> node install.js</p>
+<p>PhantomJS not found on PATH</p>
+<p>Downloading <a href="https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2" target="_blank" rel="noopener">https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2</a></p>
+<p>Saving to /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2</p>
+<p>Receiving…</p>
+<p>Error making request.</p>
+<p>Error: connect ECONNREFUSED 52.216.82.80:443</p>
+<p>​    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1117:14)</p>
+<p>Please report this full log at <a href="https://github.com/Medium/phantomjs" target="_blank" rel="noopener">https://github.com/Medium/phantomjs</a></p>
+<p>npm WARN <a href="mailto:elasticsearch-head@0.0.0" target="_blank" rel="noopener">elasticsearch-head@0.0.0</a> license should be a valid SPDX license expression</p>
+<p>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: <a href="mailto:fsevents@1.2.4" target="_blank" rel="noopener">fsevents@1.2.4</a> (node_modules/fsevents):</p>
+<p>npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for <a href="mailto:fsevents@1.2.4" target="_blank" rel="noopener">fsevents@1.2.4</a>: wanted {“os”:”darwin”,”arch”:”any”} (current: {“os”:”linux”,”arch”:”x64”})</p>
+<p>npm ERR! code ELIFECYCLE</p>
+<p>npm ERR! errno 1</p>
+<p>npm ERR! <a href="mailto:phantomjs-prebuilt@2.1.16" target="_blank" rel="noopener">phantomjs-prebuilt@2.1.16</a> install: <code>node install.js</code></p>
+<p>npm ERR! Exit status 1</p>
+<p>npm ERR! </p>
+<p>npm ERR! Failed at the <a href="mailto:phantomjs-prebuilt@2.1.16" target="_blank" rel="noopener">phantomjs-prebuilt@2.1.16</a> install script.</p>
+<p>npm ERR! This is probably not a problem with npm. There is likely additional logging output above.</p>
+<p>npm ERR! A complete log of this run can be found in:</p>
+<p>npm ERR!     /.npm/_logs/2019-01-12T05_41_50_161Z-debug.log</p>
+<p>出现此问题时建议重试几次，成功后的提示信息如下：</p>
+<p>$ npm install</p>
+<p>><a href="mailto:phantomjs-prebuilt@2.1.16install" target="_blank" rel="noopener">phantomjs-prebuilt@2.1.16install</a> /usr/local/work/es/elasticsearch-head-master/node_modules/phantomjs-prebuilt</p>
+<p>> node install.js</p>
+<p>PhantomJS not found on PATH</p>
+<p>Downloading <a href="https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2" target="_blank" rel="noopener">https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2</a></p>
+<p>Saving to /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2</p>
+<p>Receiving…</p>
+<p>  [=====================================—] 93%</p>
+<p>Received 22866K total.</p>
+<p>Extracting tar contents (via spawned process)</p>
+<p>Removing /usr/local/work/es/elasticsearch-head-master/node_modules/phantomjs-prebuilt/lib/phantom</p>
+<p>Copying extracted folder /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2-extract-1547271795685/phantomjs-2.1.1-linux-x86_64 -&gt; /usr/local/work/es/elasticsearch-head-master/node_modules/phantomjs-prebuilt/lib/phantom</p>
+<p>Writing location.js file</p>
+<p>Done. Phantomjs binary available at /usr/local/work/es/elasticsearch-head-master/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs</p>
+<p>npm notice created a lockfile as package-lock.json. You should commit this file.</p>
+<p>npm WARN <a href="mailto:elasticsearch-head@0.0.0" target="_blank" rel="noopener">elasticsearch-head@0.0.0</a> license should be a valid SPDX license expression</p>
+<p>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: <a href="mailto:fsevents@1.2.4" target="_blank" rel="noopener">fsevents@1.2.4</a> (node_modules/fsevents):</p>
+<p>npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for <a href="mailto:fsevents@1.2.4" target="_blank" rel="noopener">fsevents@1.2.4</a>: wanted {“os”:”darwin”,”arch”:”any”} (current: {“os”:”linux”,”arch”:”x64”})</p>
+<p>added 67 packages from 69 contributors and audited 1751 packages in 16.681s</p>
+<p>found 24 vulnerabilities (17 low, 1 moderate, 6 high)</p>
+<p>  run <code>npm audit fix</code> to fix them, or <code>npm audit</code> for details</p>
+<p>7、在elasticsearch-head-master文件夹下执行命令grunt server，启动head，控制台提示如下：</p>
+<p>$ grunt serverRunning “connect:server” (connect) taskWaiting forever…Started connect web server on <a href="http://localhost:9100" target="_blank" rel="noopener">http://localhost:9100</a></p>
+<p>8、在浏览器输入地址：<a href="http://192.168.119.152:9100，可见如下图信息，在红框中输入http://192.168.119.153:9200，再点击绿框中的&quot;连接&quot;按钮，即可见到elasticsharch的基本情况：" target="_blank" rel="noopener">http://192.168.119.152:9100，可见如下图信息，在红框中输入http://192.168.119.153:9200，再点击绿框中的&quot;连接&quot;按钮，即可见到elasticsharch的基本情况：</a></p>
+<p><img src="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/5.jpg" alt="img"></p>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>这里我用的是postman来验证基本功能，读者请选择自己熟悉的http工具，或者写代码来执行；</p>
+<p>1、新建所以的操作如下图，选择类型为PUT，地址是：<a href="http://192.168.119.152:9200/test001" target="_blank" rel="noopener">http://192.168.119.152:9200/test001</a></p>
+<p><img src="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/6.jpg" alt="img"></p>
+<p>上图中，红框4是elasticsearch的响应信息，表示创建成功；</p>
+<p>\2. 去head的操作页面，点击下图红框中的“连接”按钮，可见最新的索引创建情况，以及副本分布：</p>
+<p><img src="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/7.jpg" alt="img"></p>
+<p>至此，Ubuntu16环境搭建elasticsearch6.5.4集群和head插件实战就全部完成了，希望能在您安装的时候提供一些参考。</p>
 
       
 
@@ -278,7 +432,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">插件 idea</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">es安装</a>
         		</li>
       		
 		</ul>
@@ -334,7 +488,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -348,18 +502,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Linux环境快速搭建elasticsearch6.5.4集群和Head插件
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/01/23/volatile 实现原理必会必知/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">volatile 实现原理</div>
+    <a href="/2019/01/30/一个好用插件-Alibaba-Cloud-Toolkit/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一个好用插件 Alibaba Cloud Toolkit</div>
       <i class="icon-circle-right"></i>
     </a>
   
