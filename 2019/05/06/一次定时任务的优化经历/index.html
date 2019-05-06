@@ -6,19 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>science needs sacrifice</title>
+  <title>一次定时任务的优化过程 | science needs sacrifice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人只有自知无知 才能永远求知">
-<meta name="keywords" content="人只有自知无知 才能永远求知">
-<meta property="og:type" content="website">
-<meta property="og:title" content="science needs sacrifice">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="公司的作业考试业务的一个用于校验缓存与数据库的数据是否一致的定时任务执行时间从凌晨2点跑到上午11点 执行时间过长 服务器压力过大 因此领导让帮忙解决掉这个问题，将定时任务的执行时间从9个小时下降到1个小时">
+<meta name="keywords" content="代码优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一次定时任务的优化过程">
+<meta property="og:url" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/index.html">
 <meta property="og:site_name" content="science needs sacrifice">
-<meta property="og:description" content="人只有自知无知 才能永远求知">
+<meta property="og:description" content="公司的作业考试业务的一个用于校验缓存与数据库的数据是否一致的定时任务执行时间从凌晨2点跑到上午11点 执行时间过长 服务器压力过大 因此领导让帮忙解决掉这个问题，将定时任务的执行时间从9个小时下降到1个小时">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/6.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/7.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/8.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/9.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/10.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/11.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/12.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/13.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/14.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/15.jpg">
+<meta property="og:updated_time" content="2019-05-06T09:26:34.001Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="science needs sacrifice">
-<meta name="twitter:description" content="人只有自知无知 才能永远求知">
+<meta name="twitter:title" content="一次定时任务的优化过程">
+<meta name="twitter:description" content="公司的作业考试业务的一个用于校验缓存与数据库的数据是否一致的定时任务执行时间从凌晨2点跑到上午11点 执行时间过长 服务器压力过大 因此领导让帮忙解决掉这个问题，将定时任务的执行时间从9个小时下降到1个小时">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/06/一次定时任务的优化经历/4.jpg">
   
     <link rel="alternative" href="/atom.xml" title="science needs sacrifice" type="application/atom+xml">
   
@@ -158,35 +175,106 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-HashMap" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-一次定时任务的优化经历" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/18/HashMap/">HashMap</a>
+    <h1 class="article-title" itemprop="name">
+      一次定时任务的优化过程
     </h1>
   
 
         
-        <a href="/2019/01/18/HashMap/" class="archive-article-date">
-  	<time datetime="2019-01-18T07:27:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-18</time>
+        <a href="/2019/05/06/一次定时任务的优化经历/" class="archive-article-date">
+  	<time datetime="2019-05-06T09:11:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h3><p>Map 这样的 <code>KeyValue</code> 在软件开发中是非常经典的结构，常用于在内存中存放数据。下面我们来谈谈这个有意思的API。</p>
-<h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><p>众所周知 HashMap 底层是基于 <strong><em>数组 + 链表</em></strong> 组成的，不过在 jdk1.7 和 1.8 中具体实现稍有不同。</p>
-        
-          <a class="article-more-a" href="/2019/01/18/HashMap/#more">more >></a>
-        
+        <p>公司的作业考试业务的一个用于校验缓存与数据库的数据是否一致的定时任务执行时间从凌晨2点跑到上午11点 执行时间过长 服务器压力过大 因此领导让帮忙解决掉这个问题，将定时任务的执行时间从9个小时下降到1个小时</p>
+<a id="more"></a>
+<p><img src="/2019/05/06/一次定时任务的优化经历/4.jpg" alt=""></p>
+<p>从运维那里拿到的服务器的运行状况的监控图，可以看到由于定时任务的执行导致服务器的CPU使用率  系统负载 系统IO 以及服务器的硬盘读写都有了飙升，而持续时间又很长 导致对外提供服务的能力降低</p>
+<p>为了让集群中的服务器都都可以参与定时任务的执行 因此将任务拆分为生产者消费者，将需要校验的数据通过定时任务查询出来 然后发送到队列中。让集群中的所有的服务器都参与数据的校验</p>
+<h3 id="生产者问题分析与优化"><a href="#生产者问题分析与优化" class="headerlink" title="生产者问题分析与优化"></a>生产者问题分析与优化</h3><h4 id="1-sql1"><a href="#1-sql1" class="headerlink" title="1 sql1"></a>1 sql1</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> v.RECRUIT_ID <span class="keyword">FROM</span> V2_TERM v</span><br><span class="line">		<span class="keyword">JOIN</span> V2_RECRUIT vr  <span class="keyword">ON</span>  vr.ID=v.RECRUIT_ID</span><br><span class="line">		<span class="keyword">WHERE</span> v.TERM_ID <span class="keyword">in</span>(<span class="number">12</span>,<span class="number">11</span>) <span class="keyword">AND</span> v.IS_DELETE=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/06/一次定时任务的优化经历/1.jpg" alt=""></p>
+<p>通过explain 可以看出由于使用 in 导致在v2_term查询的时候没法使用索引</p>
+<p>因此将此处的in 改成 union all 进行关联查询</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> v.RECRUIT_ID <span class="keyword">FROM</span> V2_TERM v</span><br><span class="line">		<span class="keyword">JOIN</span> V2_RECRUIT vr  <span class="keyword">ON</span>  vr.ID=v.RECRUIT_ID</span><br><span class="line">		<span class="keyword">WHERE</span> v.TERM_ID =<span class="number">11</span> <span class="keyword">AND</span> v.IS_DELETE=<span class="number">0</span></span><br><span class="line">        <span class="keyword">union</span> ALL</span><br><span class="line">        <span class="keyword">SELECT</span> v.RECRUIT_ID <span class="keyword">FROM</span> V2_TERM v</span><br><span class="line">        <span class="keyword">JOIN</span> V2_RECRUIT vr  <span class="keyword">ON</span>  vr.ID=v.RECRUIT_ID</span><br><span class="line">        <span class="keyword">WHERE</span> v.TERM_ID =<span class="number">10</span> <span class="keyword">AND</span> v.IS_DELETE=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/06/一次定时任务的优化经历/2.jpg" alt=""></p>
+<p>可以看到改过的sql都使用上了索引</p>
+<h4 id="2-业务代码修改1"><a href="#2-业务代码修改1" class="headerlink" title="2 业务代码修改1"></a>2 业务代码修改1</h4><p><img src="/2019/05/06/一次定时任务的优化经历/3.jpg" alt=""></p>
+<p><img src="/2019/05/06/一次定时任务的优化经历/5.jpg" alt=""></p>
+<p>此处可以看到代码是在循环遍历数据信息 并且是根据id从缓存中获取全部的数据 而根据业务分析 此处需要的只是很少的字段数据，为了减少循环的次数 此处先将数据进行分组，再进行循环从而减少循环的次数,此处将recruitIds分为50个为1组，理论上循环的次数减少了50倍，当然这个数据可以在后面进行测试更改来达到最佳的数量，并且在查询中改为从数据库中查询 只查询必要的字段信息</p>
+<p><img src="/2019/05/06/一次定时任务的优化经历/6.jpg" alt=""></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"queryByIds"</span> <span class="attr">resultType</span>=<span class="string">"com.zhihuishu.teacherexam.dto.ExamRecruitInfoDto"</span>&gt;</span></span><br><span class="line">       select vr.ID as recruitId,vr.COURSE_ID from V2_RECRUIT vr where vr.ID in</span><br><span class="line">     <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">close</span>=<span class="string">")"</span> <span class="attr">separator</span>=<span class="string">","</span> <span class="attr">item</span>=<span class="string">"recruitId"</span>&gt;</span></span><br><span class="line">         #&#123;recruitId&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-sql2"><a href="#3-sql2" class="headerlink" title="3 sql2"></a>3 sql2</h4><p>为了获取招生下的的试卷信息 我看到了这样的sql</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">(</span><br><span class="line">         <span class="keyword">SELECT</span>  e.*</span><br><span class="line">         <span class="keyword">FROM</span> EXAM e</span><br><span class="line">         <span class="keyword">WHERE</span> e.IS_DELETE = <span class="number">0</span> <span class="keyword">AND</span> e.COURSE_ID = <span class="number">23456</span></span><br><span class="line">         )</span><br><span class="line">         <span class="keyword">UNION</span></span><br><span class="line">         (</span><br><span class="line">         <span class="keyword">SELECT</span> e.* <span class="keyword">FROM</span> EXAM e</span><br><span class="line">         <span class="keyword">JOIN</span> Z_EXAM_SCHOOL s <span class="keyword">ON</span> (e.EXAM_ID = s.EXAM_ID <span class="keyword">OR</span> e.RANDOM_PARENT_ID = s.EXAM_ID )</span><br><span class="line">         <span class="keyword">WHERE</span> e.IS_DELETE = <span class="number">0</span> <span class="keyword">AND</span> s.IS_DELETE = <span class="number">0</span> <span class="keyword">AND</span> s.RECRUIT_ID =<span class="number">12345</span></span><br><span class="line">         )</span><br><span class="line">         <span class="keyword">UNION</span></span><br><span class="line">         (</span><br><span class="line">         <span class="keyword">SELECT</span> e.* <span class="keyword">FROM</span> EXAM e</span><br><span class="line">         <span class="keyword">JOIN</span> Z_EXAM_MEET_COURSE emc <span class="keyword">ON</span> e.EXAM_ID = emc.EXAM_ID</span><br><span class="line">         <span class="keyword">WHERE</span>  e.IS_DELETE = <span class="number">0</span> <span class="keyword">AND</span> e.IS_DELETE = <span class="number">0</span> <span class="keyword">AND</span> emc.RECRUIT_ID = <span class="number">12345</span></span><br><span class="line">         )</span><br></pre></td></tr></table></figure>
+<p>可能开发的小伙伴觉得这样可以只查询一次数据库 从而增加查询的数据吧 可是explain一下呢</p>
+<p><img src="/2019/05/06/一次定时任务的优化经历/7.jpg" alt=""></p>
+<p>可以看到第二条sql由于使用了or 导致没法使用索引 因此会进行全表扫描 并且由于要进行union导致最后需要使用临时表。那么这个优化也就简单了 将其进行拆分成4条单独的sql执行即可，并且在看业务代码的时候发现此处只要查询主键id即可。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"queryIdByCourseIds"</span> <span class="attr">resultType</span>=<span class="string">"integer"</span>&gt;</span></span><br><span class="line">        SELECT  e.EXAM_ID</span><br><span class="line">        FROM EXAM e</span><br><span class="line">        WHERE e.IS_DELETE = 0 AND e.COURSE_ID in</span><br><span class="line">        <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"courseId"</span> <span class="attr">separator</span>=<span class="string">","</span> <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">close</span>=<span class="string">")"</span>&gt;</span></span><br><span class="line">            #&#123;courseId&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"queryFromExamSchool"</span> <span class="attr">resultType</span>=<span class="string">"integer"</span>&gt;</span></span><br><span class="line">        SELECT e.EXAM_ID FROM EXAM e</span><br><span class="line">         JOIN Z_EXAM_SCHOOL s ON e.EXAM_ID = s.EXAM_ID</span><br><span class="line">        WHERE e.IS_DELETE = 0 AND s.IS_DELETE = 0 AND s.RECRUIT_ID in</span><br><span class="line">        <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"recruitId"</span> <span class="attr">separator</span>=<span class="string">","</span> <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">close</span>=<span class="string">")"</span>&gt;</span></span><br><span class="line">            #&#123;recruitId&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"queryFromExamSchoo1Random"</span> <span class="attr">resultType</span>=<span class="string">"integer"</span>&gt;</span></span><br><span class="line">        SELECT e.EXAM_ID FROM EXAM e</span><br><span class="line">        JOIN Z_EXAM_SCHOOL s ON  e.RANDOM_PARENT_ID = s.EXAM_ID</span><br><span class="line">        WHERE e.IS_DELETE = 0 AND s.IS_DELETE = 0 AND s.RECRUIT_ID in</span><br><span class="line">        <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"recruitId"</span> <span class="attr">separator</span>=<span class="string">","</span> <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">close</span>=<span class="string">")"</span>&gt;</span></span><br><span class="line">            #&#123;recruitId&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"queryFormExamMeetCourse"</span> <span class="attr">resultType</span>=<span class="string">"integer"</span>&gt;</span></span><br><span class="line">        SELECT e.EXAM_ID FROM EXAM e</span><br><span class="line">                            JOIN Z_EXAM_MEET_COURSE emc ON e.EXAM_ID = emc.EXAM_ID</span><br><span class="line">        WHERE  e.IS_DELETE = 0 AND e.IS_DELETE = 0 AND emc.RECRUIT_ID in</span><br><span class="line">        <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"recruitId"</span> <span class="attr">separator</span>=<span class="string">","</span> <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">close</span>=<span class="string">")"</span>&gt;</span></span><br><span class="line">            #&#123;recruitId&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将一条sql拆分成4条sql, 然后在程序中进行数据组装,由于前面对循环进行了分组 因此此处需要改用in 来改写</p>
+<p><img src="/2019/05/06/一次定时任务的优化经历/8.jpg" alt=""></p>
+<p><img src="/2019/05/06/一次定时任务的优化经历/9.jpg" alt=""></p>
+<p>将 or的那条sql改成2条sql</p>
+<p><img src="/2019/05/06/一次定时任务的优化经历/10.jpg" alt=""></p>
+<p><img src="/2019/05/06/一次定时任务的优化经历/11.jpg" alt=""></p>
+<p>可以看出拆分后的sql都使用了索引 并且由于只查询主键 大大减少的数据的传输</p>
+<p>后来也有同事提醒，可以在数据量大的时候进行分页查询，的确是可以继续这样做下去的</p>
+<h4 id="4-业务代码修改2"><a href="#4-业务代码修改2" class="headerlink" title="4 业务代码修改2"></a>4 业务代码修改2</h4><p><img src="/2019/05/06/一次定时任务的优化经历/12.jpg" alt=""></p>
+<p>此处 将需要校验的数据循环发送，当前线上查询到需要校验数据主表的数据量为40W+，此处而是将其分装成了40W个任务</p>
+<p>采用同样的方式：此处将其进行分组 ，然后发送 既可以减少任务的循环次数 同样也为消费者那边的数据的批量处理做了准备</p>
+<p><img src="/2019/05/06/一次定时任务的优化经历/13.jpg" alt=""></p>
+<p>经过了上述的过程优化，利用线上的数据测试，成功的将生产者从原来30分钟的执行时间降低为40S。</p>
+<h3 id="消费者问题分析与优化"><a href="#消费者问题分析与优化" class="headerlink" title="消费者问题分析与优化"></a>消费者问题分析与优化</h3><h4 id="1-错误的线程池使用"><a href="#1-错误的线程池使用" class="headerlink" title="1 错误的线程池使用"></a>1 错误的线程池使用</h4><p><img src="/2019/05/06/一次定时任务的优化经历/14.jpg" alt=""></p>
+<p>可能由于原来开发的同学 为了提高消费者的性能，采用了线程池进行消费，可是这里的错误的使用，导致了主线程并不会阻塞主 而是不停的将队列的中的消息接收然后放在线程池中的阻塞队列中慢慢消费， 幸好此处我们的数据量不算很大 40W个任务 4台服务器，每台服务器存储10W+个任务， 但是这样仍然会有占用服务器的内存的问题，并且当数据量一旦大了，可能会导致服务器的宕机。</p>
+<p>因此在需要增加消费者性能的时候，可以设置并发消费者的数量来增加并发消费的能力</p>
+<p><img src="/2019/05/06/一次定时任务的优化经历/15.jpg" alt=""></p>
+<h4 id="2-单个处理改为并发处理"><a href="#2-单个处理改为并发处理" class="headerlink" title="2 单个处理改为并发处理"></a>2 单个处理改为并发处理</h4><p>​    由于原来代码将需要处理的数据单个单个发送，导致消费者这边也只能单个单个处理，而单个处理 数据库查询则是单个查询，同样缓存也是单个查询 ，后来代码改为批量发送数据，消费者数据库改为批量查询，缓存的读写操作同样改成管道的批量操作。采用了批量处理之后 理论上数据的处理效率则提升了10倍（数据从1个id一个任务改成10个id一个任务）。</p>
+<h4 id="3-业务功能范围确认"><a href="#3-业务功能范围确认" class="headerlink" title="3 业务功能范围确认"></a>3 业务功能范围确认</h4><p>​    我们这个定时器的功能定位是，<strong>比较缓存中与数据库中数据不一致的数据情况</strong>，所以在查询缓存的时候，当有些数据不存在于缓存中，我们不应该复用原来的代码（先从缓存中加载，没有再从数据库中加载），然后在进行比较,我们应该只拿缓存中存在的数据，根据存在的数据确定ids,从数据库中查询出结果进行比较，比如10个Exam有9个在缓存中，我们只需要获取在缓存中存在的9个ExamId,然后从数据库中获取这9个数据，然后与缓存中数据进行比较，批量删除不一致的数据，并记录。程序中是会对缓存中不存在的数据在进行业务操作的时候进行修补，我们需要保证的是程序在进行数据库修补的时候不应该出现慢查询导致</p>
+<p>ExamRandomRule  TestQuestionWorkExamRelation  TestQuestion  TestQuestionOptions DataInfo TestQuestionData  TestQuestionWorkExamRelation同样如此</p>
+<p>当然我们在批量查询的时候也要确定上限  如果存在几百个ids 最好也先分组 然后再去查询</p>
+<h3 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h3><p>缓存现在设置的过期时间是1年，设置过期的时间越长，缓存与数据库中的数据不一致的概率越大。所以需要减少缓存的生存时间。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<p>此次的功能优化点</p>
+<p>​    sql问题 因此在编写sql的时候 需要explain </p>
+<p>​    看sql是否使用了索引 </p>
+<p>​    大的复杂的sql是否可以拆分</p>
+<p>​    查询的字段是否只是必要的字段 </p>
+<p>​    单个的操作是否可以改成批量的操作</p>
+<p>​    缓存的单个操作是否可以改成批量操作</p>
+<p>​    代码的功能目标要明确</p>
+<p>​    </p>
+</blockquote>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -197,7 +285,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">源码分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">代码优化</a>
         		</li>
       		
 		</ul>
@@ -206,16 +294,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/18/HashMap/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/06/一次定时任务的优化经历/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/06/spring源码分析-环境搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">spring源码分析--环境搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -235,79 +382,14 @@
 
 
 
-
-  
-    <article id="post-spring-session-浅析" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/26/spring-session-浅析/">spring-session 浅析</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/26/spring-session-浅析/" class="archive-article-date">
-  	<time datetime="2018-11-26T08:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​     HttpSession 是通过servlet容器创建和管理的 如tomcat/jetty 都是保存在内存中 但是随着应该的访问量逐渐增大 单机应用无法满足时 我们将单机应用扩展为集群应用时 单机存储存储方式便成了应用集群的限制。我们需要一种新的方式来管理session.</p>
-<p>　1、利用Servlet容器提供的插件功能，自定义HttpSession的创建和管理策略，并通过配置的方式替换掉默认的策略。<em>这方面其实早就有开源项目了，例如memcached-session-manager(可以参考</em><a href="http://www.cnblogs.com/youzhibing/p/5094460.html" target="_blank" rel="noopener">负载均衡+session共享(memcached-session-manager实现</a>)，以及tomcat-redis-session-manager。不过这种方式有个缺点，就是需要耦合Tomcat/Jetty等Servlet容器的代码。</p>
-<p>　　2、设计一个Filter，利用HttpServletRequestWrapper，实现自己的 getSession()方法，接管创建和管理Session数据的工作。spring-session就是通过这样的思路实现的。</p>
-        
-          <a class="article-more-a" href="/2018/11/26/spring-session-浅析/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/26/spring-session-浅析/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -330,8 +412,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
