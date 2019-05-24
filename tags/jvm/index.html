@@ -6,24 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>SpringBoot实现过滤器、拦截器与切片 | science needs sacrifice</title>
+  <title>Tag: jvm | science needs sacrifice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1 过滤器Filter过滤器概念Filter是J2E中来的，可以看做是Servlet的一种“加强版”，它主要用于对用户请求进行预处理和后处理，拥有一个典型的处理链。Filter也可以对用户请求生成响应，这一点与Servlet相同，但实际上很少会使用Filter向用户请求生成响应。使用Filter完整的流程是：Filter对用户请求进行预处理，接着将请求交给Servlet进行预处理并生成响应，最后F">
-<meta name="keywords" content="interceptor filter">
-<meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot实现过滤器、拦截器与切片">
-<meta property="og:url" content="http://yoursite.com/2019/02/22/SpringBoot实现过滤器、拦截器与切片/index.html">
+  <meta name="description" content="人只有自知无知 才能永远求知">
+<meta name="keywords" content="人只有自知无知 才能永远求知">
+<meta property="og:type" content="website">
+<meta property="og:title" content="science needs sacrifice">
+<meta property="og:url" content="http://yoursite.com/tags/jvm/index.html">
 <meta property="og:site_name" content="science needs sacrifice">
-<meta property="og:description" content="1 过滤器Filter过滤器概念Filter是J2E中来的，可以看做是Servlet的一种“加强版”，它主要用于对用户请求进行预处理和后处理，拥有一个典型的处理链。Filter也可以对用户请求生成响应，这一点与Servlet相同，但实际上很少会使用Filter向用户请求生成响应。使用Filter完整的流程是：Filter对用户请求进行预处理，接着将请求交给Servlet进行预处理并生成响应，最后F">
+<meta property="og:description" content="人只有自知无知 才能永远求知">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/22/SpringBoot实现过滤器、拦截器与切片/0.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/02/22/SpringBoot实现过滤器、拦截器与切片/3.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/02/22/SpringBoot实现过滤器、拦截器与切片/5.jpg">
-<meta property="og:updated_time" content="2019-02-25T05:21:40.008Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringBoot实现过滤器、拦截器与切片">
-<meta name="twitter:description" content="1 过滤器Filter过滤器概念Filter是J2E中来的，可以看做是Servlet的一种“加强版”，它主要用于对用户请求进行预处理和后处理，拥有一个典型的处理链。Filter也可以对用户请求生成响应，这一点与Servlet相同，但实际上很少会使用Filter向用户请求生成响应。使用Filter完整的流程是：Filter对用户请求进行预处理，接着将请求交给Servlet进行预处理并生成响应，最后F">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/22/SpringBoot实现过滤器、拦截器与切片/0.jpg">
+<meta name="twitter:title" content="science needs sacrifice">
+<meta name="twitter:description" content="人只有自知无知 才能永远求知">
   
     <link rel="alternative" href="/atom.xml" title="science needs sacrifice" type="application/atom+xml">
   
@@ -163,262 +158,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SpringBoot实现过滤器、拦截器与切片" class="article article-type-post " itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      SpringBoot实现过滤器、拦截器与切片
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/05/24/一次线上频繁FullGC问题的解决历程/" class="archive-article-date">
+  	<time datetime="2019-05-24T00:49:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/05/24/一次线上频繁FullGC问题的解决历程/">一次线上频繁FullGC问题的解决历程</a>
     </h1>
   
 
-        
-        <a href="/2019/02/22/SpringBoot实现过滤器、拦截器与切片/" class="archive-article-date">
-  	<time datetime="2019-02-22T05:18:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-过滤器Filter"><a href="#1-过滤器Filter" class="headerlink" title="1 过滤器Filter"></a>1 过滤器Filter</h3><h4 id="过滤器概念"><a href="#过滤器概念" class="headerlink" title="过滤器概念"></a>过滤器概念</h4><p>Filter是J2E中来的，可以看做是Servlet的一种“加强版”，它主要用于对用户请求进行预处理和后处理，拥有一个典型的处理链。Filter也可以对用户请求生成响应，这一点与Servlet相同，但实际上很少会使用Filter向用户请求生成响应。使用Filter完整的流程是：Filter对用户请求进行预处理，接着将请求交给Servlet进行预处理并生成响应，最后Filter再对服务器响应进行后处理。</p>
-<a id="more"></a>
-<p>过滤器作用</p>
-<p>在JavaDoc中给出了几种过滤器的作用</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * A filter is an object that performs filtering tasks on either the</span></span><br><span class="line"><span class="comment"> * request to a resource (a servlet or static content), or on the response</span></span><br><span class="line"><span class="comment"> * from a resource, or both.</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * &lt;p&gt;Filters perform filtering in the &lt;code&gt;doFilter&lt;/code&gt; method.</span></span><br><span class="line"><span class="comment"> * Every Filter has access to a FilterConfig object from which it can obtain</span></span><br><span class="line"><span class="comment"> * its initialization parameters, and a reference to the ServletContext which</span></span><br><span class="line"><span class="comment"> * it can use, for example, to load resources needed for filtering tasks.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;Filters are configured in the deployment descriptor of a web</span></span><br><span class="line"><span class="comment"> * application.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;Examples that have been identified for this design are:</span></span><br><span class="line"><span class="comment"> * &lt;ol&gt;</span></span><br><span class="line"><span class="comment"> * &lt;li&gt;Authentication Filters  权限过滤</span></span><br><span class="line"><span class="comment"> * &lt;li&gt;Logging and Auditing Filters 日志和审核过滤</span></span><br><span class="line"><span class="comment"> * &lt;li&gt;Image conversion Filters 图片转换过滤</span></span><br><span class="line"><span class="comment"> * &lt;li&gt;Data compression Filters 数据压缩过滤</span></span><br><span class="line"><span class="comment"> * &lt;li&gt;Encryption Filters 加密过滤</span></span><br><span class="line"><span class="comment"> * &lt;li&gt;Tokenizing Filters token认证过滤</span></span><br><span class="line"><span class="comment"> * &lt;li&gt;Filters that trigger resource access events 用于触发资源访问事件的过滤</span></span><br><span class="line"><span class="comment"> * &lt;li&gt;XSL/T filters</span></span><br><span class="line"><span class="comment"> * &lt;li&gt;Mime-type chain Filter </span></span><br><span class="line"><span class="comment"> * &lt;/ol&gt;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> Servlet 2.3</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-<p>对于第一条，即使用Filter作权限过滤，其可以这么实现：定义一个Filter，获取每个客户端发起的请求URL，与当前用户无权限访问的URL列表（可以是从缓存中取出）作对比，起到权限过滤的作用。</p>
-<h4 id="过滤器实现方式"><a href="#过滤器实现方式" class="headerlink" title="过滤器实现方式"></a>过滤器实现方式</h4><p><img src="/2019/02/22/SpringBoot实现过滤器、拦截器与切片/0.jpg" alt=""></p>
-<p>自定义的过滤器都必须实现javax.Servlet.Filter接口，并重写接口中定义的三个方法：</p>
-<blockquote>
-<p>1 void init(FilterConfig config)</p>
-<p>用于完成Filter的初始化。</p>
-<p>2 void doFilter(ServletRequest request,ServletResponse response,FilterChain chain)</p>
-<p>实现过滤功能，即对每个请求及响应增加的额外的预处理和后处理。,执行该方法之前，即对用户请求进行预处理；执行该方法之后，即对服务器响应进行后处理。值得注意的是，chain.doFilter()方法执行之前为预处理阶段，该方法执行结束即代表用户的请求已经得到控制器处理。因此，如果再doFilter中忘记调用chain.doFilter()方法，则用户的请求将得不到处理。</p>
-<p>3 void destory()</p>
-<p>用于Filter销毁前，完成某些资源的回收。</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.able.springbootes.web;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jipeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019-02-22 15:09</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoggingFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FilterConfig filterConfig)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">        log.info(<span class="string">"filter-init"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest request, ServletResponse response, FilterChain chain)</span> <span class="keyword">throws</span> IOException, ServletException </span>&#123;</span><br><span class="line"></span><br><span class="line">        log.info(<span class="string">"start to doFilter"</span>);</span><br><span class="line">        <span class="keyword">long</span> startTime = System.currentTimeMillis();</span><br><span class="line">        chain.doFilter(request, response);</span><br><span class="line">        <span class="keyword">long</span> endTime = System.currentTimeMillis();</span><br><span class="line">        log.info(<span class="string">"the request of &#123;&#125; consumes &#123;&#125;ms."</span>, ((HttpServletRequest)request).getRequestURL().toString(), (endTime - startTime));</span><br><span class="line">        log.info(<span class="string">"end to doFilter"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        log.info(<span class="string">"filter-destroy"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>从代码中可看出，类Filter是在javax.servlet.*中，因此可以看出，过滤器的一个很大的局限性在于，其不能够知道当前用户的请求是被哪个控制器(Controller)处理的，因为后者是spring框架中定义的。</p>
-<p>在SpringBoot中注册第三方过滤器</p>
-<p>对于SpringMvc，可以通过在web.xml中注册过滤器。但在SpringBoot中不存在web.xml，此时如果引用的某个jar包中的过滤器，则需要通过FilterRegistrationBean来对filter进行注册，注册方式为：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.able.springbootes.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.able.springbootes.web.LoggingFilter;</span><br><span class="line"><span class="keyword">import</span> com.able.springbootes.web.MyInterceptor;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.web.servlet.FilterRegistrationBean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.InterceptorRegistry;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jipeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019-02-22 15:16</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebConfig</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> FilterRegistrationBean <span class="title">loggingFilter</span><span class="params">()</span></span>&#123;</span><br><span class="line">        FilterRegistrationBean filterRegistrationBean=<span class="keyword">new</span> FilterRegistrationBean();</span><br><span class="line">        filterRegistrationBean.setFilter(<span class="keyword">new</span> LoggingFilter());</span><br><span class="line">      	<span class="comment">// 匹配所有请求路径</span></span><br><span class="line">        filterRegistrationBean.setUrlPatterns(Arrays.asList(<span class="string">"/*"</span>));</span><br><span class="line">        <span class="keyword">return</span> filterRegistrationBean;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-拦截器HandlerInterceptor"><a href="#2-拦截器HandlerInterceptor" class="headerlink" title="2  拦截器HandlerInterceptor"></a>2  拦截器HandlerInterceptor</h3><h4 id="拦截器概念"><a href="#拦截器概念" class="headerlink" title="拦截器概念"></a>拦截器概念</h4><p>拦截器，在AOP(Aspect-Oriented Programming)中用于在某个方法或字段被访问之前，进行拦截，然后在之前或之后加入某些操作。拦截是AOP的一种实现策略。</p>
-<p>拦截器作用</p>
-<ol>
-<li>日志记录：记录请求信息的日志，以便进行信息监控、信息统计、计算PV（Page View）等</li>
-<li>权限检查：如登录检测，进入处理器检测检测是否登录</li>
-<li>性能监控：通过拦截器在进入处理器之前记录开始时间，在处理完后记录结束时间，从而得到该请求的处理时间。（反向代理，如apache也可以自动记录）；</li>
-<li>通用行为：读取cookie得到用户信息并将用户对象放入请求，从而方便后续流程使用，还有如保存request response等参数信息等，只要是多个处理器都需要的即可使用拦截器实现。</li>
-</ol>
-<h4 id="拦截器实现"><a href="#拦截器实现" class="headerlink" title="拦截器实现"></a>拦截器实现</h4><p>HandlerInterceptor是springMVC项目中的拦截器，它拦截的目标是请求的地址，比MethodInterceptor先执行。</p>
-<p>实现一个HandlerInterceptor拦截器可以直接实现HandlerInterceptor接口，也可以继承HandlerInterceptorAdapter类。</p>
-<p>这两种方法殊途同归，其实HandlerInterceptorAdapter也就是声明了HandlerInterceptor接口中所有方法的默认实现，而我们在继承他之后只需要重写必要的方法。</p>
-<blockquote>
-<ol>
-<li><p>preHandler(HttpServletRequest request, HttpServletResponse response, Object handler)</p>
-<p>方法将在请求处理之前进行调用。SpringMVC中的Interceptor同Filter一样都是链式调用。每个Interceptor的调用会依据它的声明顺序依次执行，而且最先执行的都是Interceptor中的preHandle方法，所以可以在这个方法中进行一些前置初始化操作或者是对当前请求的一个预处理，也可以在这个方法中进行一些判断来决定请求是否要继续进行下去。该方法的返回值是布尔值Boolean 类型的，当它返回为false时，表示请求结束，后续的Interceptor和Controller都不会再执行；当返回值为true时就会继续调用下一个Interceptor 的preHandle 方法，如果已经是最后一个Interceptor 的时候就会是调用当前请求的Controller 方法。</p>
-<p>​</p>
-</li>
-<li><p>postHandler(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)</p>
-<p>在当前请求进行处理之后，也就是Controller 方法调用之后执行，但是它会在DispatcherServlet 进行视图返回渲染之前被调用，所以我们可以在这个方法中对Controller 处理之后的ModelAndView 对象进行操作。</p>
-<p>​</p>
-</li>
-<li><p>afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handle, Exception ex)</p>
-<p>该方法也是需要当前对应的Interceptor的preHandle方法的返回值为true时才会执行。顾名思义，该方法将在整个请求结束之后，也就是在DispatcherServlet 渲染了对应的视图之后执行。这个方法的主要作用是用于进行资源清理工作的。</p>
-</li>
-</ol>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.able.springbootes.web;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.method.HandlerMethod;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.ModelAndView;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.handler.HandlerInterceptorAdapter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jipeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019-02-22 15:48</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyInterceptor</span> <span class="keyword">extends</span> <span class="title">HandlerInterceptorAdapter</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        log.info(<span class="string">"myInterceptor-preHander: 在请求处理之前进行调用（Controller方法调用之前）"</span>);</span><br><span class="line">        <span class="comment">// 需要返回true，否则请求不会被控制器处理</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.preHandle(request, response, handler);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        log.info(<span class="string">"myInterceptor-postHandle:请求处理之后进行调用，但是在视图被渲染之前（Controller方法调用之后），如果异常发生，则该方法不会被调用"</span>);</span><br><span class="line">        HandlerMethod handlerMethod = (HandlerMethod) handler;</span><br><span class="line">        log.info(<span class="string">"controller object is &#123;&#125;"</span>, handlerMethod.getBean().getClass().getName());</span><br><span class="line">        <span class="keyword">super</span>.postHandle(request, response, handler, modelAndView);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterCompletion</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        log.info(<span class="string">"myInterceptor-afterCompletion:在整个请求结束之后被调用，也就是在DispatcherServlet 渲染了对应的视图之后执行（主要是用于进行资源清理工作）"</span>);</span><br><span class="line">        <span class="keyword">super</span>.afterCompletion(request, response, handler, ex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>与过滤器不同的是，拦截器需要通过实现WebMvcConfigurer手动注册：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.able.springbootes.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.able.springbootes.web.LoggingFilter;</span><br><span class="line"><span class="keyword">import</span> com.able.springbootes.web.MyInterceptor;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.web.servlet.FilterRegistrationBean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.InterceptorRegistry;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jipeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019-02-22 15:16</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebConfig</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addInterceptors</span><span class="params">(InterceptorRegistry registry)</span> </span>&#123;</span><br><span class="line">        registry.addInterceptor(<span class="keyword">new</span> MyInterceptor());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-拦截器MethodInterceptor"><a href="#3-拦截器MethodInterceptor" class="headerlink" title="3 拦截器MethodInterceptor"></a>3 拦截器MethodInterceptor</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>相比过滤器，HandlerInterceptor拦截器能够知道用户发出的请求最终被哪个控制器处理，但是拦截器只能拦截controller层 ,在对一些普通的方法上的拦截HandlerInterceptoer就无能为力了，这时候只能利用AOP的MethodInterceptor,它拦截的目标是方法，即使不是controller中的方法.</p>
-<p>####基于注解的AspectJ方式切片实现</p>
-<p>描述AOP常用的一些术语有：通知(Adivce)、连接点（Join point）、切点（Pointcut）、切面（Aspect）、引入（Introduction）、织入（Weaving）</p>
-<p>首先明确的核心概念：<strong>切面 = 切点 + 通知。</strong></p>
-<h5 id="通知-Adivce"><a href="#通知-Adivce" class="headerlink" title="通知(Adivce)"></a>通知(Adivce)</h5><pre><code>&gt;通知分为五种类型：
-&gt;
-&gt;​    Before(前置通知)：在目标方法被调用之前调用通知功能
-&gt;
-&gt;​    After(后置通知)：在目标方法完成后调用通知，无论方法是否执行成功，不会关心方法的输出是什么
-&gt;
-&gt;​    After-returning(返回通知)：在目标方法成功执行之后调用通知
-&gt;
-&gt;​    After-throwing(异常通知)：在目标方法抛出异常后调用通知
-&gt;
-&gt;​    Around(通知环绕)：通知包裹了被通知的方法，在被通知的方法调用之前和调用之后执行自定义的行为
-</code></pre><h5 id="连接点-Join-point）"><a href="#连接点-Join-point）" class="headerlink" title="连接点(Join point）"></a>连接点(Join point）</h5><blockquote>
-<p>连接点是一个应用执行过程中能够插入一个切面的点。比如：方法调用、方法执行、字段设置/获取、异常处理执行、类初始化、甚至是for循环中的某个点。理论上, 程序执行过程中的任何时点都可以作为作为织入点, 而所有这些执行时点都是Joint point，但 Spring AOP 目前仅支持方法执行 (method execution)。</p>
-</blockquote>
-<h5 id="切点-Pointcut）"><a href="#切点-Pointcut）" class="headerlink" title="切点(Pointcut）"></a>切点(Pointcut）</h5><blockquote>
-<p>通知（advice）定义了切面何时，那么切点就是定义切面“何处” 描述某一类 Joint points, 比如定义了很多 Joint point, 对于 Spring AOP 来说就是匹配哪些方法的执行。</p>
-</blockquote>
-<h5 id="切面-Aspect"><a href="#切面-Aspect" class="headerlink" title="切面(Aspect)"></a>切面(Aspect)</h5><blockquote>
-<p>切面是切点和通知的结合。通知和切点共同定义了关于切面的全部内容 —— 它是什么时候，在何时和何处完成功能。</p>
-</blockquote>
-<p>​    </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.able.springbootes.web;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.JoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.ProceedingJoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.annotation.*;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.context.request.RequestContextHolder;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.context.request.ServletRequestAttributes;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jipeng</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019-02-22 17:00</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TimeAspect</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut</span>(value = <span class="string">"execution(* com.able.springbootes.controller.MyController.*(..))"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pc</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Before</span>(value = <span class="string">"pc()"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">(JoinPoint joinPoint)</span></span>&#123;</span><br><span class="line">        log.info(<span class="string">"time aspect is before."</span>);</span><br><span class="line">        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();</span><br><span class="line">        HttpServletRequest request = requestAttributes.getRequest();</span><br><span class="line">        <span class="comment">//url</span></span><br><span class="line">        log.info(<span class="string">"url=&#123;&#125;"</span>,request.getRequestURL());</span><br><span class="line">        <span class="comment">//请求方法类型 GET POST</span></span><br><span class="line">        log.info(<span class="string">"method=&#123;&#125;"</span>,request.getMethod());</span><br><span class="line">        <span class="comment">//ip</span></span><br><span class="line">        log.info(<span class="string">"remoteAddress=&#123;&#125;,remoteHost=&#123;&#125;,remoteUser=&#123;&#125;,remotePort=&#123;&#125;"</span>,request.getRemoteAddr(),</span><br><span class="line">                request.getRemoteHost(),request.getRemoteUser(),request.getRemotePort());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方法名</span></span><br><span class="line">        log.info(<span class="string">"method:&#123;&#125;"</span>,joinPoint.getSignature().getDeclaringTypeName()+<span class="string">"."</span>+joinPoint.getSignature().getName());</span><br><span class="line">        <span class="comment">//参数</span></span><br><span class="line">        Object[] args = joinPoint.getArgs();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; args.length; i++) &#123;</span><br><span class="line"></span><br><span class="line">            log.info(<span class="string">"args=&#123;&#125;"</span>,args[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@After</span>(<span class="string">"pc()"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span></span>&#123;</span><br><span class="line">        log.info(<span class="string">"time aspect is after."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@AfterReturning</span>(pointcut = <span class="string">"pc()"</span>,returning = <span class="string">"object"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span>  <span class="title">afterReturing</span><span class="params">(Object object)</span></span>&#123;</span><br><span class="line">        log.info(<span class="string">"afterreturning---response=&#123;&#125;"</span>,object);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@AfterThrowing</span>(pointcut = <span class="string">"pc()"</span>,throwing = <span class="string">"exception"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterThrowing</span><span class="params">(Exception exception)</span></span>&#123;</span><br><span class="line">        log.info(<span class="string">"afterThrowing"</span>,exception);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Around</span>(<span class="string">"pc()"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">handleTime</span><span class="params">(ProceedingJoinPoint proceedingJoinPoint)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">       log.info(<span class="string">"time aspect is Around-start."</span>);</span><br><span class="line">        <span class="keyword">for</span> (Object object : proceedingJoinPoint.getArgs()) &#123;</span><br><span class="line">            log.info(<span class="string">"---"</span>+object.toString());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> startTime = System.currentTimeMillis();</span><br><span class="line">        Object obj = proceedingJoinPoint.proceed();</span><br><span class="line">        log.info(<span class="string">"time aspect is Around-after 耗时："</span> + (System.currentTimeMillis() - startTime));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="过滤器、拦截器以及切片的调用顺序"><a href="#过滤器、拦截器以及切片的调用顺序" class="headerlink" title="过滤器、拦截器以及切片的调用顺序"></a>过滤器、拦截器以及切片的调用顺序</h3><p>如下图，展示了三者的调用顺序Filter-&gt;Intercepto-&gt;Aspect-&gt;Controller。相反的是，当Controller抛出的异常的处理顺序则是从内到外的。因此我们总是定义一个注解@ControllerAdvice去统一处理控制器抛出的异常。如果一旦异常被@ControllerAdvice处理了，则调用拦截器的afterCompletion方法的参数Exception ex就为空了。</p>
-<p><img src="/2019/02/22/SpringBoot实现过滤器、拦截器与切片/3.jpg" alt=""></p>
-<p>而对于过滤器和拦截器详细的调用顺序如下图：</p>
-<p><img src="/2019/02/22/SpringBoot实现过滤器、拦截器与切片/5.jpg" alt=""></p>
-<h3 id="4-小节"><a href="#4-小节" class="headerlink" title="4 小节"></a>4 小节</h3><p>AOP使用的主要是动态代理 ， 过滤器使用的主要是反射 ；拦截器使用的主要是回调 。<br>一个请求过来 ，先进行过滤器处理，看程序是否受理该请求 。 过滤器放过后 ， 程序中的拦截器进行处理 ，处理完后进入 被 AOP动态代理重新编译过的主要业务类进行处理 </p>
-<p>Filter：和框架无关，可以控制最初的http请求，但是更细一点的类和方法控制不了。<br>HandlerInterceptor：可以控制请求的控制器和方法<br>MethodInterceptor: 可以自定义切入的点，有方法的参数，但是拿不到http请求，可以通过其他方式如RequestContextHolder获得。</p>
-<p>Filter，HandlerInterceptor，MethodInterceptor实际上都是对Aop的具体实现。都是对业务逻辑的提取。都可以实现权限检查，日志记录。不同的是使用的范围不同，规范不同，深度不同。</p>
-<p>执行顺序 ：过滤前 - 拦截前 - aspect 开始执行- controller逻辑处理 - - aspect 结束 - 拦截后 - 过滤后。</p>
-<p>Filter 是 java web 里面的，肯定获取不到 spring 里面 Controller 的信息。</p>
-<p>Interceptor、Aspect 是和 spring 相关的，所以能获取到 Controller 的信息。</p>
-<p>前台一个请求过来 ，会先进行过滤器处理，看程序是否受理该请求 。 过滤器放过后 ， 程序中的拦截器进行处理 ，处理完后进入 被 AOP 动态代理重新编译过的主要业务类进行处理</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">interceptor filter</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jvm</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/22/SpringBoot实现过滤器、拦截器与切片/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/02/27/阿里云Redis开发规范/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          阿里云Redis开发规范
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/02/19/ArrayList源码分析/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ArrayList源码分析</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -441,9 +234,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
