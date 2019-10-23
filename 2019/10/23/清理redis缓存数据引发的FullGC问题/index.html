@@ -6,19 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: spring | science needs sacrifice</title>
+  <title>清理redis缓存数据引发的FullGC问题 | science needs sacrifice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人只有自知无知 才能永远求知">
-<meta name="keywords" content="人只有自知无知 才能永远求知">
-<meta property="og:type" content="website">
-<meta property="og:title" content="science needs sacrifice">
-<meta property="og:url" content="http://yoursite.com/tags/spring/index.html">
+  <meta name="description" content="背景同事负责的项目Redis占用内存过多，至于原因就不说了，无非是把缓存当数据库使用 设置了很多永久缓存 导致占用内存过大，为了降低成本，运维不同意增加内存， 只能对现有的缓存服务器进行内存清理。同事听说我有过这方面的经验。于是向我请教一下。。。。顺便借鉴了我的一波代码">
+<meta name="keywords" content="JVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="清理redis缓存数据引发的FullGC问题">
+<meta property="og:url" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/index.html">
 <meta property="og:site_name" content="science needs sacrifice">
-<meta property="og:description" content="人只有自知无知 才能永远求知">
+<meta property="og:description" content="背景同事负责的项目Redis占用内存过多，至于原因就不说了，无非是把缓存当数据库使用 设置了很多永久缓存 导致占用内存过大，为了降低成本，运维不同意增加内存， 只能对现有的缓存服务器进行内存清理。同事听说我有过这方面的经验。于是向我请教一下。。。。顺便借鉴了我的一波代码">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/0.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/6.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/7.jpg">
+<meta property="og:updated_time" content="2019-10-23T10:01:15.704Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="science needs sacrifice">
-<meta name="twitter:description" content="人只有自知无知 才能永远求知">
+<meta name="twitter:title" content="清理redis缓存数据引发的FullGC问题">
+<meta name="twitter:description" content="背景同事负责的项目Redis占用内存过多，至于原因就不说了，无非是把缓存当数据库使用 设置了很多永久缓存 导致占用内存过大，为了降低成本，运维不同意增加内存， 只能对现有的缓存服务器进行内存清理。同事听说我有过这方面的经验。于是向我请教一下。。。。顺便借鉴了我的一波代码">
+<meta name="twitter:image" content="http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="science needs sacrifice" type="application/atom+xml">
   
@@ -158,60 +168,189 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-清理redis缓存数据引发的FullGC问题" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/06/spring源码分析-环境搭建/" class="archive-article-date">
-  	<time datetime="2019-03-06T01:11:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/spring源码分析-环境搭建/">spring源码分析--环境搭建</a>
+    <h1 class="article-title" itemprop="name">
+      清理redis缓存数据引发的FullGC问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/10/23/清理redis缓存数据引发的FullGC问题/" class="archive-article-date">
+  	<time datetime="2019-10-23T08:07:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>同事负责的项目Redis占用内存过多，至于原因就不说了，无非是把缓存当数据库使用 设置了很多永久缓存 导致占用内存过大，为了降低成本，运维不同意增加内存， 只能对现有的缓存服务器进行内存清理。同事听说我有过这方面的经验。于是向我请教一下。。。。顺便借鉴了我的一波代码</p>
+<a id="more"></a>
+<p><img src="/2019/10/23/清理redis缓存数据引发的FullGC问题/0.jpg" alt=""></p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>什么都不说 先上代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.zhihuishu.studentstudyquartz.job;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.common.base.Joiner;</span><br><span class="line"><span class="keyword">import</span> com.google.common.base.Splitter;</span><br><span class="line"><span class="keyword">import</span> com.google.common.collect.Lists;</span><br><span class="line"><span class="keyword">import</span> com.xxl.job.core.biz.model.ReturnT;</span><br><span class="line"><span class="keyword">import</span> com.xxl.job.core.handler.IJobHandler;</span><br><span class="line"><span class="keyword">import</span> com.xxl.job.core.handler.annotation.JobHander;</span><br><span class="line"><span class="keyword">import</span> com.zhihuishu.toolkit.jedis.BeanWrapper;</span><br><span class="line"><span class="keyword">import</span> com.zhihuishu.toolkit.jedis.template.JedisExecutor;</span><br><span class="line"><span class="keyword">import</span> com.zhihuishu.toolkit.jedis.template.JedisTemplate;</span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.springframework.amqp.rabbit.core.RabbitTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"><span class="keyword">import</span> org.springframework.util.CollectionUtils;</span><br><span class="line"><span class="keyword">import</span> org.springframework.util.StringUtils;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Pipeline;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.ScanParams;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.ScanResult;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019-05-15 15:05</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@JobHander</span>(<span class="string">"redisCleanJobHandlerABC"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisCleanJobHandler</span> <span class="keyword">extends</span> <span class="title">IJobHandler</span> </span>&#123;</span><br><span class="line"><span class="comment">//    @Autowired</span></span><br><span class="line"><span class="comment">//    JedisTemplate jedisTemplate;</span></span><br><span class="line"><span class="comment">//    @Resource</span></span><br><span class="line"><span class="comment">//    JedisExecutor jedisExecutor;</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    JedisExecutor jedisExecutorStudy;</span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    RabbitTemplate redisCleanTemplate;</span><br><span class="line"></span><br><span class="line">    ThreadLocal&lt;Integer&gt; countThreadLocal=<span class="keyword">new</span> ThreadLocal&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ReturnT&lt;String&gt; <span class="title">execute</span><span class="params">(String... params)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (params == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> ReturnT&lt;&gt;(<span class="string">"参数错误:"</span> + params);</span><br><span class="line">        &#125;</span><br><span class="line">        String key = params[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">            log.info(<span class="string">"清除指定缓存的任务开始:&#123;&#125;"</span>, key);</span><br><span class="line">            jedisExecutorStudy.execute(jedis -&gt; &#123;</span><br><span class="line">                <span class="comment">// 游标初始值为0</span></span><br><span class="line">                String cursor = ScanParams.SCAN_POINTER_START;</span><br><span class="line">                <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">                ScanParams scanParams = <span class="keyword">new</span> ScanParams();</span><br><span class="line">                <span class="comment">// 匹配以 urlvinfo:u:* 为前缀的 key</span></span><br><span class="line">                scanParams.match(key);</span><br><span class="line">                scanParams.count(<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">int</span> loop=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                    loop++;</span><br><span class="line">                    <span class="comment">//使用scan命令获取数据，使用cursor游标记录位置，下次循环使用</span></span><br><span class="line">                    ScanResult&lt;String&gt; scanResult = jedis.scan(cursor, scanParams);</span><br><span class="line">                    <span class="comment">// 返回0 说明遍历完成</span></span><br><span class="line">                    cursor = scanResult.getStringCursor();</span><br><span class="line">                    List&lt;String&gt; list = scanResult.getResult();</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span> (!CollectionUtils.isEmpty(list)) &#123;</span><br><span class="line">                        count+=list.size();</span><br><span class="line">                        String keysString = Joiner.on(<span class="string">","</span>).join(list);</span><br><span class="line">                        <span class="comment">//发送消息</span></span><br><span class="line">                        redisCleanTemplate.convertAndSend(keysString);</span><br><span class="line"></span><br><span class="line">                    &#125;</span><br><span class="line"><span class="comment">//                    System.out.println("cursor="+cursor);</span></span><br><span class="line">                    <span class="keyword">if</span> (ScanParams.SCAN_POINTER_START.equals(cursor)) &#123;</span><br><span class="line">                        countThreadLocal.set(count);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (loop % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            log.info(<span class="string">"睡眠 100ms"</span>);</span><br><span class="line">                            TimeUnit.MICROSECONDS.sleep(<span class="number">100</span>);</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                            e.printStackTrace();</span><br><span class="line">                        &#125;</span><br><span class="line">                        log.info(<span class="string">"loopCount=&#123;&#125;,扫描到的数量为:&#123;&#125;"</span>, loop,count);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                log.info(<span class="string">"扫描结束 跳出循环"</span>);</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> ReturnT&lt;&gt;(<span class="string">"消费成功的数量为："</span>+countThreadLocal.get() );</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            log.error(<span class="string">"清除指定缓存的任务 同步数据到mq中发生错误"</span>, e);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ReturnT.FAIL;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/***查询队列中的用户</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@author</span> </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span> 2019/5/15 19:39</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> void</span></span><br><span class="line"><span class="comment">     **/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//    private Object queryUserByKey(String key) &#123;</span></span><br><span class="line"><span class="comment">//        List&lt;String&gt; strings = Splitter.on(":").splitToList(key);</span></span><br><span class="line"><span class="comment">//        String userId = strings.get(2);</span></span><br><span class="line"><span class="comment">//        if (StringUtils.isEmpty(userId)) &#123;</span></span><br><span class="line"><span class="comment">//            return null;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//        BeanWrapper&lt;Object&gt; objectBeanWrapper = jedisExecutor.executeAndReturn(jedis -&gt; &#123;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//            Set&lt;String&gt; recruitList = jedis.smembers(key);</span></span><br><span class="line"><span class="comment">//            if (!CollectionUtils.isEmpty(recruitList)) &#123;</span></span><br><span class="line"><span class="comment">//                List&lt;String&gt; userWatchInfoKeyLists = Lists.newArrayListWithCapacity(recruitList.size());</span></span><br><span class="line"><span class="comment">//                String[] recruItArray = new String[recruitList.size()];</span></span><br><span class="line"><span class="comment">//                recruitList.toArray(recruItArray);</span></span><br><span class="line"><span class="comment">//                for (String member : recruitList) &#123;</span></span><br><span class="line"><span class="comment">//                    //保存所有的用户招生观看的详细信息的key</span></span><br><span class="line"><span class="comment">//                    userWatchInfoKeyLists.add(String.format(USER_RECRUIT_LAST_VIEW, userId, member));</span></span><br><span class="line"><span class="comment">//                &#125;</span></span><br><span class="line"><span class="comment">//                if (!CollectionUtils.isEmpty(userWatchInfoKeyLists)) &#123;</span></span><br><span class="line"><span class="comment">//                    String keysString = Joiner.on(",").join(userWatchInfoKeyLists);</span></span><br><span class="line"><span class="comment">//                    //发送消息</span></span><br><span class="line"><span class="comment">//                    urLastViewInfoTemplate.convertAndSend(keysString);</span></span><br><span class="line"><span class="comment">//                &#125;</span></span><br><span class="line"><span class="comment">//                //将已经发送到消息队列同步到数据库的用户-招生信息从set中移除</span></span><br><span class="line"><span class="comment">//                //jedis.srem(key, recruItArray);</span></span><br><span class="line"><span class="comment">//                return new KVObject(key, recruItArray);</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//            return null;</span></span><br><span class="line"><span class="comment">//        &#125;);</span></span><br><span class="line"><span class="comment">//        return objectBeanWrapper.getValue();</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>为了方便操作  我把清理的脚本做成了一个定时任务/当然也可以弄成HTTP 链接 不过 那样就有对外暴露的风险了。</p>
+<p>在清理内存的时候 根据运维同事整理出来一些占用量比较大的key,根据指定的开头进行扫描。为了加快清理速度，把扫描到的key 发送到消息队列中，并开启多个线程进行删除操作。</p>
+<p>同事拿到了我的代码 进行了一波改写  然后就高高兴兴的去清理缓存了。过了一会他发消息给我说我的代码有毒 直接把他的项目弄挂了 并且贴了一张图。。。。</p>
+<p><img src="/2019/10/23/清理redis缓存数据引发的FullGC问题/1.jpg" alt=""></p>
+<p>我去，你这简直是在侮辱我作为一个程序员的职业素养。</p>
+<p><img src="/2019/10/23/清理redis缓存数据引发的FullGC问题/2.jpg" alt=""></p>
+<p>根据以前学习的jmv笔记，以及上面的异常日志。察觉到应该是Full_GC的时候存在大对象 没法回收导致回收空间达不到比例</p>
+<p><img src="/2019/10/23/清理redis缓存数据引发的FullGC问题/3.jpg" alt=""></p>
+<p>不过我是一个以理服人的开发(其实更怕被打脸)，我要去找证据，更多的是学习一下这种问题，毕竟还是那句话，GC出现问题是可遇不可的。不管三七二十一，立刻停下手里的话，从运维同事那里拿来的dump文件 用帅气的姿势打开</p>
+<p><img src="/2019/10/23/清理redis缓存数据引发的FullGC问题/4.jpg" alt=""></p>
+<p>看到这张图 ，可以看到6G的堆内存 这个大对象占了5.9G 在进行FullGC的时候由于没法回收 导致多次GC回收的内存达不到2%。左边的这些这些属性熟悉 我就有种不祥的预感，这家伙不会在程序中使用了线程池了吧。还是Executors.newFix的那种。然后导致线程池的队列中存在大量的数据 没法GC回收</p>
+<p>打开大对象的对象占用图</p>
+<p><img src="/2019/10/23/清理redis缓存数据引发的FullGC问题/5.jpg" alt=""></p>
+<p>果然， 去看了一下他的代码，看到了他在消费者代码中使用了线程池，问他为啥要使用线程池，他说想多个线程一起消费 可能会快点。 额 本来这样写也不会有多大问题 只要消费者速度够快，只是他的代码中再清除缓存的时候使用了for单个清除，并且会记录日志 ，这就导致了生产者的速度远远大于消费者的速度。只能又给他科普了一下线程池的原理。</p>
+<p><img src="/2019/10/23/清理redis缓存数据引发的FullGC问题/6.jpg" alt=""></p>
+<p>然后让他去掉线程池，想要增加消费线程池数可以在消息队列监听的时候设置并发的消费线程数。 </p>
+<p>庆幸的是他只是发的是外网单台服务器（公司外网环境一台不对外的服务器） 虽然服务器挂了 但是影响不大 代码修改了后重新发版后 就没有再出现FULL_GC的问题了。 感谢MAT 让我有了洗刷冤屈的机会,并且让自己的JVM的学习有了实践的机会。沉冤昭雪的感觉很棒啊，唯一的遗憾就是 没有坑那个同事一瓶肥仔水。</p>
+<p><img src="/2019/10/23/清理redis缓存数据引发的FullGC问题/7.jpg" alt=""></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/23/清理redis缓存数据引发的FullGC问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/10/23/记一次上线发版的大坑/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">记一次上线发版的大坑</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -234,9 +373,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

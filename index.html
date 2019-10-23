@@ -160,6 +160,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-清理redis缓存数据引发的FullGC问题" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/23/清理redis缓存数据引发的FullGC问题/">清理redis缓存数据引发的FullGC问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/23/清理redis缓存数据引发的FullGC问题/" class="archive-article-date">
+  	<time datetime="2019-10-23T08:07:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>同事负责的项目Redis占用内存过多，至于原因就不说了，无非是把缓存当数据库使用 设置了很多永久缓存 导致占用内存过大，为了降低成本，运维不同意增加内存， 只能对现有的缓存服务器进行内存清理。同事听说我有过这方面的经验。于是向我请教一下。。。。顺便借鉴了我的一波代码</p>
+        
+          <a class="article-more-a" href="/2019/10/23/清理redis缓存数据引发的FullGC问题/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/23/清理redis缓存数据引发的FullGC问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-记一次上线发版的大坑" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -847,111 +923,6 @@
 
 
   
-    <article id="post-Linux环境快速搭建elasticsearch6-5-4集群和Head插件" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/">Linux环境快速搭建elasticsearch6.5.4集群和Head插件</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/" class="archive-article-date">
-  	<time datetime="2019-02-12T02:06:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>来源：</p>
-<p><a href="https://blog.csdn.net/boling_cavalry/article/details/86358716" target="_blank" rel="noopener">https://blog.csdn.net/boling_cavalry/article/details/86358716</a></p>
-<p>今天来一起实战Linux环境下搭建elasticsearch6.5.4集群和Head插件；</p>
-<p><strong>环境信息</strong></p>
-<p>操作系统：Ubuntu 16.04.5 LTS</p>
-<p>JDK：1.8.0_191</p>
-<p>elasticsearch：6.5.4</p>
-<p>nodejs：v10.15.0</p>
-<p>本次实战准备了两台机器，它们的基本情况如下所示：</p>
-<table>
-<thead>
-<tr>
-<th>IP地址</th>
-<th>hostname</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>192.168.119.152</td>
-<td>node-0</td>
-<td>节点0</td>
-</tr>
-<tr>
-<td>192.168.119.153</td>
-<td>node-1</td>
-<td>节点1</td>
-</tr>
-</tbody>
-</table>
-        
-          <a class="article-more-a" href="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">es安装</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/12/Linux环境快速搭建elasticsearch6-5-4集群和Head插件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1053,11 +1024,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">插件</a>
+                <a href="javascript:void(0)" class="js-tag color3">es</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">es</a>
+                <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1089,15 +1060,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JVM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">源码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">源码分析</a>
+                <a href="javascript:void(0)" class="js-tag color4">interceptor filter</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">interceptor filter</a>
+                <a href="javascript:void(0)" class="js-tag color5">源码分析</a>
               </li>
             
             <div class="clearfix"></div>
