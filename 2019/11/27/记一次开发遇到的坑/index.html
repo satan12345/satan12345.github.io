@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>记一次开发遇到的坑 | science needs sacrifice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言作为一个小小的开发，虽然是已挖坑作为主业，但是也可能在无意中挖坑把自己给埋了，所以一个合格的程序员 不仅要擅长写bug，也要擅长爬坑,否则自己不是死在自己手上就是死在别的开发手上">
+  <meta name="description" content="前言作为一个小小的开发，虽然是以挖坑埋别人作为主业，但是也可能在无意中挖坑把自己给埋了，所以一个合格的程序员 不仅要擅长写bug，也要擅长爬坑,否则自己不是死在自己手上就是死在别的开发手上">
 <meta name="keywords" content="开发 bug">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次开发遇到的坑">
 <meta property="og:url" content="http://yoursite.com/2019/11/27/记一次开发遇到的坑/index.html">
 <meta property="og:site_name" content="science needs sacrifice">
-<meta property="og:description" content="前言作为一个小小的开发，虽然是已挖坑作为主业，但是也可能在无意中挖坑把自己给埋了，所以一个合格的程序员 不仅要擅长写bug，也要擅长爬坑,否则自己不是死在自己手上就是死在别的开发手上">
+<meta property="og:description" content="前言作为一个小小的开发，虽然是以挖坑埋别人作为主业，但是也可能在无意中挖坑把自己给埋了，所以一个合格的程序员 不仅要擅长写bug，也要擅长爬坑,否则自己不是死在自己手上就是死在别的开发手上">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/11/27/记一次开发遇到的坑/0.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/11/27/记一次开发遇到的坑/2.jpg">
@@ -31,10 +31,10 @@
 <meta property="og:image" content="http://yoursite.com/2019/11/27/记一次开发遇到的坑/13.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/11/27/记一次开发遇到的坑/15.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/11/27/记一次开发遇到的坑/14.jpg">
-<meta property="og:updated_time" content="2019-11-27T09:41:07.771Z">
+<meta property="og:updated_time" content="2019-11-28T08:44:53.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次开发遇到的坑">
-<meta name="twitter:description" content="前言作为一个小小的开发，虽然是已挖坑作为主业，但是也可能在无意中挖坑把自己给埋了，所以一个合格的程序员 不仅要擅长写bug，也要擅长爬坑,否则自己不是死在自己手上就是死在别的开发手上">
+<meta name="twitter:description" content="前言作为一个小小的开发，虽然是以挖坑埋别人作为主业，但是也可能在无意中挖坑把自己给埋了，所以一个合格的程序员 不仅要擅长写bug，也要擅长爬坑,否则自己不是死在自己手上就是死在别的开发手上">
 <meta name="twitter:image" content="http://yoursite.com/2019/11/27/记一次开发遇到的坑/0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="science needs sacrifice" type="application/atom+xml">
@@ -195,7 +195,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>作为一个小小的开发，虽然是已挖坑作为主业，但是也可能在无意中挖坑把自己给埋了，所以一个合格的程序员 不仅要擅长写bug，也要擅长爬坑,否则自己不是死在自己手上就是死在别的开发手上</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>作为一个小小的开发，虽然是以挖坑埋别人作为主业，但是也可能在无意中挖坑把自己给埋了，所以一个合格的程序员 不仅要擅长写bug，也要擅长爬坑,否则自己不是死在自己手上就是死在别的开发手上</p>
 <a id="more"></a>
 <p><img src="/2019/11/27/记一次开发遇到的坑/0.jpg" alt=""></p>
 <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近新作了一个项目 采用了SpringBoot的最新版本2.2.0，而这个版本默认的mysql驱动是这个,就这样一个bug就悄无声息的埋下了。</p>
@@ -222,7 +222,7 @@
 <p>想想不应该是时区问题，东八区 至少应该跟8有关系吧 要么多8个小时 要门少24-8=16个小时。 14个小时什么意思？真让人头大</p>
 <p><img src="/2019/11/27/记一次开发遇到的坑/10.jpg" alt=""></p>
 <p>实在没有思路 网上查询资料之后发现是因为引入最新的mysql驱动引起的，8.0版本以上的mysql驱动需要在url后面加上时区。</p>
-<p>有两种方式解决此问题<br>方式一：在配置文件的jdbc的url上面手动设置了serverTimezone=CST（保持和操作系统和数据库一致的时区，不管哪里的时区只要保持一致就可以喽）<br>方式二：降低驱动版本咯</p>
+<p>有两种方式解决此问题<br>方式一：在配置文件的jdbc的url上面手动设置了serverTimezone=GMT%2B8 （保持和操作系统和数据库一致的时区，不管哪里的时区只要保持一致就可以喽）<br>方式二：降低驱动版本咯</p>
 <h2 id="又是一个涨芝士的坑"><a href="#又是一个涨芝士的坑" class="headerlink" title="又是一个涨芝士的坑"></a>又是一个涨芝士的坑</h2><p>是不是以为这个坑爬上来就完了？ 我也是这么认为的，可是事实还是太年轻了？新的坑又来了</p>
 <p>给同事提供接口查询数据 接口，过了一会同事给我发了一张图</p>
 <p><img src="/2019/11/27/记一次开发遇到的坑/13.jpg" alt=""></p>
