@@ -6,27 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>RocketMQ-安装 | science needs sacrifice</title>
+  <title>Tag: jvm 功能优化 | science needs sacrifice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="背景 RocketMQ作为一款阿里开源的消息中间件 一次次经历双十一的洗礼  其卓越的性能是可想而知到 ,并且在经过捐赠给Apache的孵化，已经成为一款顶级项目。">
-<meta name="keywords" content="中间件">
-<meta property="og:type" content="article">
-<meta property="og:title" content="RocketMQ-安装">
-<meta property="og:url" content="http://yoursite.com/2019/05/10/RocketMQ-主从安装/index.html">
+  <meta name="description" content="人只有自知无知 才能永远求知">
+<meta name="keywords" content="人只有自知无知 才能永远求知">
+<meta property="og:type" content="website">
+<meta property="og:title" content="science needs sacrifice">
+<meta property="og:url" content="http://yoursite.com/tags/jvm-功能优化/index.html">
 <meta property="og:site_name" content="science needs sacrifice">
-<meta property="og:description" content="背景 RocketMQ作为一款阿里开源的消息中间件 一次次经历双十一的洗礼  其卓越的性能是可想而知到 ,并且在经过捐赠给Apache的孵化，已经成为一款顶级项目。">
+<meta property="og:description" content="人只有自知无知 才能永远求知">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/RocketMQ-主从安装/0.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/RocketMQ-主从安装/1.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/RocketMQ-主从安装/2.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/RocketMQ-主从安装/3.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/RocketMQ-主从安装/6.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/05/10/RocketMQ-主从安装/4.jpg">
-<meta property="og:updated_time" content="2019-05-10T06:44:28.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RocketMQ-安装">
-<meta name="twitter:description" content="背景 RocketMQ作为一款阿里开源的消息中间件 一次次经历双十一的洗礼  其卓越的性能是可想而知到 ,并且在经过捐赠给Apache的孵化，已经成为一款顶级项目。">
-<meta name="twitter:image" content="http://yoursite.com/2019/05/10/RocketMQ-主从安装/0.jpg">
+<meta name="twitter:title" content="science needs sacrifice">
+<meta name="twitter:description" content="人只有自知无知 才能永远求知">
   
     <link rel="alternative" href="/atom.xml" title="science needs sacrifice" type="application/atom+xml">
   
@@ -166,214 +158,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-RocketMQ-主从安装" class="article article-type-post " itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      RocketMQ-安装
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/03/23/记一次优化功能引发打满CPU以及填坑的过程/" class="archive-article-date">
+  	<time datetime="2020-03-23T04:21:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-23</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/03/23/记一次优化功能引发打满CPU以及填坑的过程/">记一次优化功能引发打满CPU以及填坑的过程</a>
     </h1>
   
 
-        
-        <a href="/2019/05/10/RocketMQ-主从安装/" class="archive-article-date">
-  	<time datetime="2019-05-10T05:09:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><blockquote>
-<p>RocketMQ作为一款阿里开源的消息中间件 一次次经历双十一的洗礼  其卓越的性能是可想而知到 ,并且在经过捐赠给Apache的孵化，已经成为一款顶级项目。</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="下载编译获取安装包"><a href="#下载编译获取安装包" class="headerlink" title="下载编译获取安装包"></a>下载编译获取安装包</h3><p> 首先 我们从gitHub仓库中fork一份源码到我们自己账号中，便于后续的学习</p>
-<p> 利用Idea将项目导入</p>
-<p><img src="/2019/05/10/RocketMQ-主从安装/0.jpg" alt=""></p>
-<p>从RocketMQ的的官网快速启动的页面中获取相关的环境要求与编译方式:</p>
-<p><img src="/2019/05/10/RocketMQ-主从安装/1.jpg" alt=""></p>
-<p>利用命令 mvn -Prelease-all -DskipTests clean install -U对项目进行编译</p>
-<p><img src="/2019/05/10/RocketMQ-主从安装/2.jpg" alt=""></p>
-<p>等到项目打包完成 我们便可以在distribution模块中的target目录下获得到apache-rocketmq.tar.gz的包 </p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="修改服务器的hotst"><a href="#修改服务器的hotst" class="headerlink" title="修改服务器的hotst"></a>修改服务器的hotst</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/hosts</span><br><span class="line"><span class="number">192.168</span>.119.134 rocketmq-nameserver1</span><br><span class="line"><span class="number">192.168</span>.119.163 rocketmq-nameserver2</span><br><span class="line"><span class="number">192.168</span>.119.134 rocketmq-master1</span><br><span class="line"><span class="number">192.168</span>.119.163 rocketmq-master1-slave</span><br></pre></td></tr></table></figure>
-<p>为了确保服务器直接能够通信 需要打开防火墙的端口</p>
-<h4 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">上传apache-rocketmq.tar.gz文件至/usr/local</span><br><span class="line">mkdir apache-rocketmq</span><br><span class="line">tar -zxvf apache-rocketmq.tar.gz -C /usr/local/apache-rocketmq</span><br><span class="line">ln -s apache-rocketmq rocketmq</span><br></pre></td></tr></table></figure>
-<h4 id="创建存储路径"><a href="#创建存储路径" class="headerlink" title="创建存储路径"></a>创建存储路径</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/rocketmq/store</span><br><span class="line">mkdir /usr/local/rocketmq/store/commitlog</span><br><span class="line">mkdir /usr/local/rocketmq/store/consumequeue</span><br><span class="line">mkdir /usr/local/rocketmq/store/index</span><br></pre></td></tr></table></figure>
-<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>vim /usr/local/rocketmq/conf/2m-2s-async/broker-a.properties</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#所属集群名字</span><br><span class="line">brokerClusterName=rocketmq-cluster</span><br><span class="line">#broker名字，注意此处不同的配置文件填写的不一样 </span><br><span class="line">brokerName=broker-a</span><br><span class="line">#0 表示 Master，&gt;0 表示 Slave</span><br><span class="line">brokerId=0</span><br><span class="line">#nameServer地址，分号分割</span><br><span class="line">namesrvAddr=rocketmq-nameserver1:9876;rocketmq-nameserver2:9876</span><br><span class="line">#在发送消息时，自动创建服务器不存在的topic，默认创建的队列数</span><br><span class="line">defaultTopicQueueNums=4</span><br><span class="line">#是否允许 Broker 自动创建Topic，建议线下开启，线上关闭</span><br><span class="line">autoCreateTopicEnable=true</span><br><span class="line">#是否允许 Broker 自动创建订阅组，建议线下开启，线上关闭</span><br><span class="line">autoCreateSubscriptionGroup=true</span><br><span class="line">#Broker 对外服务的监听端口</span><br><span class="line">listenPort=10911</span><br><span class="line">#删除文件时间点，默认凌晨 4点</span><br><span class="line">deleteWhen=04</span><br><span class="line">#文件保留时间，默认 48 小时</span><br><span class="line">fileReservedTime=120 #commitLog每个文件的大小默认1G</span><br><span class="line">mapedFileSizeCommitLog=1073741824 #ConsumeQueue每个文件默认存30W条，根据业务情况调整</span><br><span class="line">mapedFileSizeConsumeQueue=300000</span><br><span class="line">#destroyMapedFileIntervalForcibly=120000</span><br><span class="line">#redeleteHangedFileInterval=120000</span><br><span class="line">#检测物理文件磁盘空间</span><br><span class="line">diskMaxUsedSpaceRatio=88</span><br><span class="line">#存储路径</span><br><span class="line">storePathRootDir=/usr/local/rocketmq/store</span><br><span class="line">#commitLog 存储路径</span><br><span class="line">storePathCommitLog=/usr/local/rocketmq/store/commitlog</span><br><span class="line">#消费队列存储路径存储路径</span><br><span class="line">storePathConsumeQueue=/usr/local/rocketmq/store/consumequeue</span><br><span class="line">#消息索引存储路径</span><br><span class="line">storePathIndex=/usr/local/rocketmq/store/index</span><br><span class="line">#checkpoint 文件存储路径</span><br><span class="line">storeCheckpoint=/usr/local/rocketmq/store/checkpoint</span><br><span class="line">#abort 文件存储路径</span><br><span class="line">abortFile=/usr/local/rocketmq/store/abort</span><br><span class="line">#限制的消息大小</span><br><span class="line">maxMessageSize=65536</span><br><span class="line">#flushCommitLogLeastPages=4</span><br><span class="line">#flushConsumeQueueLeastPages=2</span><br><span class="line">#flushCommitLogThoroughInterval=10000</span><br><span class="line">#flushConsumeQueueThoroughInterval=60000</span><br><span class="line">#Broker 的角色</span><br><span class="line">#- ASYNC_MASTER 异步复制Master</span><br><span class="line">#- SYNC_MASTER 同步双写Master</span><br><span class="line">#- SLAVE</span><br><span class="line">brokerRole=ASYNC_MASTER</span><br><span class="line">#刷盘方式</span><br><span class="line">#- ASYNC_FLUSH 异步刷盘</span><br><span class="line">#- SYNC_FLUSH 同步刷盘</span><br><span class="line">flushDiskType=ASYNC_FLUSH</span><br><span class="line">#checkTransactionMessageEnable=false</span><br><span class="line">#发消息线程池数量</span><br><span class="line">#sendMessageThreadPoolNums=128</span><br><span class="line">#拉消息线程池数量</span><br><span class="line">#pullMessageThreadPoolNums=128</span><br></pre></td></tr></table></figure>
-<p>vim /usr/local/rocketmq/conf/2m-2s-async /broker-a-s.properties</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">#所属集群名字</span><br><span class="line">brokerClusterName=rocketmq-cluster</span><br><span class="line">#broker名字，注意此处不同的配置文件填写的不一样 </span><br><span class="line">brokerName=broker-a</span><br><span class="line">#0 表示 Master，&gt;0 表示 Slave</span><br><span class="line">brokerId=1</span><br><span class="line">#nameServer地址，分号分割</span><br><span class="line">namesrvAddr=rocketmq-nameserver1:9876;rocketmq-nameserver2:9876</span><br><span class="line">#在发送消息时，自动创建服务器不存在的topic，默认创建的队列数</span><br><span class="line">defaultTopicQueueNums=4</span><br><span class="line">#是否允许 Broker 自动创建Topic，建议线下开启，线上关闭</span><br><span class="line">autoCreateTopicEnable=true</span><br><span class="line">#是否允许 Broker 自动创建订阅组，建议线下开启，线上关闭</span><br><span class="line">autoCreateSubscriptionGroup=true</span><br><span class="line">#Broker 对外服务的监听端口</span><br><span class="line">listenPort=10911</span><br><span class="line">#删除文件时间点，默认凌晨 4点</span><br><span class="line">deleteWhen=04</span><br><span class="line">#文件保留时间，默认 48 小时</span><br><span class="line">fileReservedTime=120 #commitLog每个文件的大小默认1G</span><br><span class="line">mapedFileSizeCommitLog=1073741824 #ConsumeQueue每个文件默认存30W条，根据业务情况调整</span><br><span class="line">mapedFileSizeConsumeQueue=300000</span><br><span class="line">#destroyMapedFileIntervalForcibly=120000</span><br><span class="line">#redeleteHangedFileInterval=120000</span><br><span class="line">#检测物理文件磁盘空间</span><br><span class="line">diskMaxUsedSpaceRatio=88</span><br><span class="line">#存储路径</span><br><span class="line">storePathRootDir=/usr/local/rocketmq/store</span><br><span class="line">#commitLog 存储路径</span><br><span class="line">storePathCommitLog=/usr/local/rocketmq/store/commitlog</span><br><span class="line">#消费队列存储路径存储路径</span><br><span class="line">storePathConsumeQueue=/usr/local/rocketmq/store/consumequeue</span><br><span class="line">#消息索引存储路径</span><br><span class="line">storePathIndex=/usr/local/rocketmq/store/index</span><br><span class="line">#checkpoint 文件存储路径</span><br><span class="line">storeCheckpoint=/usr/local/rocketmq/store/checkpoint</span><br><span class="line">#abort 文件存储路径</span><br><span class="line">abortFile=/usr/local/rocketmq/store/abort</span><br><span class="line">#限制的消息大小</span><br><span class="line">maxMessageSize=65536</span><br><span class="line">#flushCommitLogLeastPages=4</span><br><span class="line">#flushConsumeQueueLeastPages=2</span><br><span class="line">#flushCommitLogThoroughInterval=10000</span><br><span class="line">#flushConsumeQueueThoroughInterval=60000</span><br><span class="line">#Broker 的角色</span><br><span class="line">#- ASYNC_MASTER 异步复制Master</span><br><span class="line">#- SYNC_MASTER 同步双写Master</span><br><span class="line">#- SLAVE</span><br><span class="line">brokerRole=ASYNC_MASTER</span><br><span class="line">#刷盘方式</span><br><span class="line">#- ASYNC_FLUSH 异步刷盘</span><br><span class="line">#- SYNC_FLUSH 同步刷盘</span><br><span class="line">flushDiskType=ASYNC_FLUSH</span><br><span class="line">#checkTransactionMessageEnable=false</span><br><span class="line">#发消息线程池数量</span><br><span class="line">#sendMessageThreadPoolNums=128</span><br><span class="line">#拉消息线程池数量</span><br><span class="line">#pullMessageThreadPoolNums=128</span><br></pre></td></tr></table></figure>
-<h4 id="修改日志配置文件"><a href="#修改日志配置文件" class="headerlink" title="修改日志配置文件"></a>修改日志配置文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /usr/local/rocketmq/logs</span><br><span class="line">cd /usr/local/rocketmq/conf &amp;&amp; sed -i &apos;s#$&#123;user.home&#125;#/usr/local/rocketmq#g&apos; *.xml</span><br></pre></td></tr></table></figure>
-<h4 id="修改启动脚本参数"><a href="#修改启动脚本参数" class="headerlink" title="修改启动脚本参数"></a>修改启动脚本参数</h4><p>由于使用的是虚拟机 需要将jvm的内存配置改小</p>
-<p>vim /usr/local/rocketmq/bin/runbroker.sh</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#==============================================================================</span><br><span class="line"># 开发环境JVM Configuration</span><br><span class="line">#==============================================================================</span><br><span class="line">JAVA_OPT=&quot;$&#123;JAVA_OPT&#125; -server -Xms1g -Xmx1g -Xmn512m -XX:PermSize=128m -XX:MaxPermSize=320m&quot;</span><br></pre></td></tr></table></figure>
-<p>vim /usr/local/rocketmq/bin/runserver.sh</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JAVA_OPT=&quot;$&#123;JAVA_OPT&#125; -server -Xms1g -Xmx1g -Xmn512m -XX:PermSize=128m -XX:MaxPermSize=320m&quot;</span><br></pre></td></tr></table></figure>
-<h4 id="启动NameServer"><a href="#启动NameServer" class="headerlink" title="启动NameServer"></a>启动NameServer</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/rocketmq/bin</span><br><span class="line">nohup sh mqnamesrv &amp;</span><br></pre></td></tr></table></figure>
-<h4 id="启动master节点"><a href="#启动master节点" class="headerlink" title="启动master节点"></a>启动master节点</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/rocketmq/bin</span><br><span class="line">nohup sh mqbroker -c /usr/<span class="built_in">local</span>/rocketmq/conf/2m-2s-async/broker-a.properties &gt;/dev/null 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
-<h4 id="启动slave节点"><a href="#启动slave节点" class="headerlink" title="启动slave节点"></a>启动slave节点</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/rocketmq/bin</span><br><span class="line">nohup sh mqbroker -c /usr/<span class="built_in">local</span>/rocketmq/conf/2m-2s-async/broker-a.properties &gt;/dev/null 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
-<h4 id="RocketMQ-Console部署"><a href="#RocketMQ-Console部署" class="headerlink" title="RocketMQ Console部署"></a>RocketMQ Console部署</h4><p>为了能够直观的看到服务器的启动与运行 我们需要部署rocketmq-console项目</p>
-<p>从github上面下载项目  <a href="https://github.com/apache/rocketmq-externals" target="_blank" rel="noopener">rocket-externals</a></p>
-<p>将 rocketmq-console项目导入本地 修改配置文件中的rocketmq.config.namesrvAddr属性 填写上nameServe的地址</p>
-<p><img src="/2019/05/10/RocketMQ-主从安装/3.jpg" alt=""></p>
-<p>然后maven 打包</p>
-<p>mvn clean package -D skipTest</p>
-<p><img src="/2019/05/10/RocketMQ-主从安装/6.jpg" alt=""></p>
-<p> 将获得到的jar包 直接启动 java -jar rocketmq-console-ng-1.0.1.jar</p>
-<p>最终通过浏览器访问：</p>
-<p><img src="/2019/05/10/RocketMQ-主从安装/4.jpg" alt=""></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">中间件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jvm 功能优化</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/10/RocketMQ-主从安装/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/05/24/一次线上频繁FullGC问题的解决历程/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          一次线上频繁FullGC问题的解决历程
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/05/06/一次定时任务的优化经历/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">一次定时任务的优化过程</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -396,9 +234,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
